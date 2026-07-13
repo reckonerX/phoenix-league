@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>All-Time Stats — Phoenix League</title>
+<link rel="icon" href="assets/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="assets/phoenix-league-logo-favicon.svg">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="stats">
+<div data-include="partials/nav.html"></div>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>All-Time Stats</h1>
+    <p>Career records across every manager. "Weighted %" adjusts for sample size
+       so a couple of hot seasons don't outrank a decade of consistency &mdash;
+       "Raw %" is the simple number.</p>
+  </div>
+</section>
+
+<main class="wrap">
+  <section id="championships-table">
+    <h2>Championships</h2>
+    <table id="champ-table"><thead>
+      <tr><th>Manager</th><th>Championships</th><th>Top-4 Finishes</th><th>Seasons Played</th></tr>
+    </thead><tbody></tbody></table>
+  </section>
+
+  <section id="winpct-table">
+    <h2>Win % Leaderboard</h2>
+    <table id="wp-table"><thead>
+      <tr><th>Manager</th><th>Record</th><th>Raw %</th><th>Weighted %</th><th>Games</th></tr>
+    </thead><tbody></tbody></table>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="wrap">Phoenix League &middot; site structure in progress</div></footer>
+
+<script src="js/include.js"></script>
+<script src="js/data.js"></script>
+<script>
+(async function () {
+  const managers = await loadManagers();
+
+  const champBody = document.querySelector('#champ-table tbody');
+  champBody.innerHTML = [...managers]
+    .sort((a, b) => b.career.championships - a.career.championships || b.career.top4_appearances - a.career.top4_appearances)
+    .map(m => `<tr>
+      <td>${m.display_name}</td>
+      <td>${m.career.championships}</td>
+      <td>${m.career.top4_appearances}</td>
+      <td>${m.years_active.length}</td>
+    </tr>`).join('');
+
+  const wpBody = document.querySelector('#wp-table tbody');
+  wpBody.innerHTML = [...managers]
+    .sort((a, b) => b.career.win_pct_adjusted - a.career.win_pct_adjusted)
+    .map(m => `<tr>
+      <td>${m.display_name}</td>
+      <td>${m.career.wins}-${m.career.losses}</td>
+      <td>${pct(m.career.win_pct)}</td>
+      <td>${pct(m.career.win_pct_adjusted)}</td>
+      <td>${m.career.games_played}</td>
+    </tr>`).join('');
+})();
+</script>
+</body>
+</html>

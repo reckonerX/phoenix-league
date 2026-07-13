@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Season Archive — Phoenix League</title>
+<link rel="icon" href="assets/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="assets/phoenix-league-logo-favicon.svg">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="seasons">
+<div data-include="partials/nav.html"></div>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Season Archive</h1>
+    <p>Every season since 2011, standings, and the stories behind them (anecdotes coming as they're submitted).</p>
+  </div>
+</section>
+
+<main class="wrap">
+  <section id="season-list"></section>
+</main>
+
+<footer class="site-footer"><div class="wrap">Phoenix League &middot; site structure in progress</div></footer>
+
+<script src="js/include.js"></script>
+<script src="js/data.js"></script>
+<script>
+(async function () {
+  const seasons = (await loadSeasons()).sort((a, b) => b.year - a.year);
+  const managers = await loadManagers();
+  const nameOf = (slug) => (managers.find(m => m.slug === slug) || {}).display_name || slug;
+
+  const container = document.getElementById('season-list');
+  container.innerHTML = seasons.map(s => {
+    if (s.legacy_missing_data) {
+      return `<div class="card" style="margin-bottom:16px;">
+        <span class="badge">${s.year}</span>
+        <span class="badge">Legacy Season &mdash; records unrecovered</span>
+        <h3>${s.year}</h3>
+        <p class="meta">This season was played, but standings data has not been recovered yet.
+        Platform and full results are being investigated.</p>
+      </div>`;
+    }
+    const standingsList = s.standings.map((slug, i) =>
+      `<li>${i + 1}. ${nameOf(slug)}</li>`).join('');
+    return `<div class="card" style="margin-bottom:16px;">
+      <span class="badge champion">${s.year} Champion: ${nameOf(s.champion)}</span>
+      <span class="badge">Platform: ${s.platform || 'TBD'}</span>
+      <h3>${s.year} Season</h3>
+      <details>
+        <summary>Full standings</summary>
+        <ol>${standingsList}</ol>
+      </details>
+      ${s.anecdotes.length
+        ? `<ul>${s.anecdotes.map(a => `<li>${a}</li>`).join('')}</ul>`
+        : `<div class="empty-state" style="margin-top:10px;">No stories submitted yet for this season.</div>`}
+    </div>`;
+  }).join('');
+})();
+</script>
+</body>
+</html>

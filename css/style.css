@@ -1,0 +1,187 @@
+/* =========================================================
+   PHOENIX LEAGUE — placeholder stylesheet
+   No brand decisions made yet. Every color/font below is a
+   neutral placeholder. When brand is finalized, only this
+   block of variables should need to change.
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Public+Sans:wght@400;500;700&display=swap');
+
+:root {
+  --brand-primary: #7A2A2E;
+  --brand-secondary: #A9812C;
+  --brand-accent: #D9601C;
+  --brand-bg: #17130F;
+  --brand-bg-alt: #211B15;
+  --brand-text: #E8DFCF;
+  --brand-border: #3B2F23;
+
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Public Sans', sans-serif;
+
+  /* Seal-mark-only exceptions -- NOT for general UI use, only for
+     reproducing/extending the seal mark itself (assets/phoenix-league-logo-full.svg). */
+  --brand-primary-gradient-start: #8A3236;
+  --brand-primary-gradient-end: #661F23;
+  --brand-seal-gold: #D8B25A;
+  --brand-seal-gold-small: #B78F34;
+  --brand-seal-subtext: #CBB98F;
+
+  --radius: 4px;
+  --max-width: 1100px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--brand-bg);
+  color: var(--brand-text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; }
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Nav --- */
+header.site-header {
+  border-bottom: 2px solid var(--brand-border);
+  background: var(--brand-bg);
+}
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.site-header .brand {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--brand-text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.site-header .brand img { height: 32px; width: 32px; }
+.site-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+.site-header nav a {
+  color: var(--brand-text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+}
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+  border-bottom-color: var(--brand-accent);
+}
+
+/* --- Hero (placeholder) --- */
+.hero {
+  padding: 48px 0;
+  background: var(--brand-bg-alt);
+  border-bottom: 1px solid var(--brand-border);
+}
+.hero h1 { font-size: 2.2rem; margin: 0 0 8px; }
+.hero p { max-width: 600px; color: var(--brand-secondary); }
+
+/* --- Cards / grids --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+.card {
+  border: 1px solid var(--brand-border);
+  border-radius: var(--radius);
+  padding: 16px;
+  background: var(--brand-bg);
+}
+.card h3 { margin: 0 0 6px; font-size: 1.1rem; }
+.card h3 a { color: var(--brand-text); text-decoration: none; }
+.card h3 a:hover { color: var(--brand-accent); text-decoration: underline; }
+.card .meta { color: var(--brand-secondary); font-size: 0.85rem; margin: 0; }
+.card .stat-line { font-size: 0.85rem; margin: 4px 0 0; }
+
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--brand-bg-alt);
+  color: var(--brand-secondary);
+  border: 1px solid var(--brand-border);
+  margin-right: 4px;
+}
+.badge.champion { background: var(--brand-accent); color: var(--brand-bg); border-color: var(--brand-accent); font-weight: 600; }
+
+/* --- Tables --- */
+table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--brand-border); font-size: 0.9rem; }
+th { color: var(--brand-secondary); font-weight: 600; border-bottom: 2px solid var(--brand-border); }
+tr:hover td { background: var(--brand-bg-alt); }
+
+/* --- Section headers --- */
+main section { padding: 32px 0; }
+main section + section { border-top: 1px solid var(--brand-border); }
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+  color: var(--brand-secondary);
+}
+
+/* --- Rulebook --- */
+.rulebook-layout { display: grid; grid-template-columns: 240px 1fr; gap: 32px; }
+.rulebook-toc { position: sticky; top: 20px; align-self: start; font-size: 0.9rem; }
+.rulebook-toc ul { list-style: none; padding: 0; margin: 0; }
+.rulebook-toc li { margin-bottom: 6px; }
+.rulebook-toc a { color: var(--brand-text); text-decoration: none; }
+.rulebook-toc a:hover { color: var(--brand-accent); }
+.rule-section h3 { border-bottom: 1px solid var(--brand-border); padding-bottom: 6px; }
+.todo-flag {
+  background: var(--brand-bg-alt);
+  border: 1px dashed var(--brand-secondary);
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  margin: 12px 0;
+  color: var(--brand-text);
+}
+
+/* --- Empty state --- */
+.empty-state {
+  border: 1px dashed var(--brand-border);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  color: var(--brand-secondary);
+}
+
+footer.site-footer {
+  border-top: 1px solid var(--brand-border);
+  margin-top: 40px;
+  padding: 24px 0;
+  color: var(--brand-secondary);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 720px) {
+  .rulebook-layout { grid-template-columns: 1fr; }
+  .site-header .wrap { flex-direction: column; align-items: flex-start; gap: 10px; }
+}

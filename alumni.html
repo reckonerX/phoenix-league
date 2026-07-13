@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Alumni — Phoenix League</title>
+<link rel="icon" href="assets/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="assets/phoenix-league-logo-favicon.svg">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="alumni">
+<div data-include="partials/nav.html"></div>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Alumni</h1>
+    <p>Honoring the managers who built this league's history before moving on.</p>
+  </div>
+</section>
+
+<main class="wrap">
+  <section id="alumni-grid" class="grid"></section>
+</main>
+
+<footer class="site-footer"><div class="wrap">Phoenix League &middot; site structure in progress</div></footer>
+
+<script src="js/include.js"></script>
+<script src="js/data.js"></script>
+<script>
+(async function () {
+  const managers = (await loadManagers())
+    .filter(m => m.status === 'alumni')
+    .sort((a, b) => b.years_active.length - a.years_active.length);
+  const grid = document.getElementById('alumni-grid');
+  grid.innerHTML = managers.map(m => `<div class="card">
+    <h3>${m.display_name}</h3>
+    <p class="meta">${Math.min(...m.years_active)}&ndash;${Math.max(...m.years_active)} &middot; ${m.years_active.length} season${m.years_active.length === 1 ? '' : 's'}</p>
+    <p class="stat-line">${m.career.wins}-${m.career.losses} (${pct(m.career.win_pct)}) &middot; ${m.career.championships} championship${m.career.championships === 1 ? '' : 's'}</p>
+    ${m.bio ? `<p>${m.bio}</p>` : `<div class="empty-state">Bio coming soon.</div>`}
+  </div>`).join('');
+})();
+</script>
+</body>
+</html>

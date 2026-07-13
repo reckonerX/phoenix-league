@@ -1,0 +1,253 @@
+[
+  {
+    "year": 2011,
+    "platform": null,
+    "legacy_missing_data": false,
+    "champion": "austin",
+    "standings": [
+      "austin",
+      "will",
+      "kyle",
+      "patrick-1-0",
+      "jeff",
+      "ben",
+      "david",
+      "wes-1-0"
+    ],
+    "anecdotes": []
+  },
+  {
+    "year": 2012,
+    "platform": null,
+    "legacy_missing_data": false,
+    "champion": "austin",
+    "standings": [
+      "austin",
+      "david",
+      "kyle",
+      "micah",
+      "will",
+      "wes",
+      "madison",
+      "jeff"
+    ],
+    "anecdotes": []
+  },
+  {
+    "year": 2013,
+    "platform": null,
+    "legacy_missing_data": false,
+    "champion": "kyle",
+    "standings": [
+      "kyle",
+      "becca",
+      "austin",
+      "micah",
+      "nick",
+      "david",
+      "will",
+      "jeffrey",
+      "wes",
+      "john"
+    ],
+    "anecdotes": []
+  },
+  {
+    "year": 2014,
+    "platform": null,
+    "legacy_missing_data": false,
+    "champion": "john",
+    "standings": [
+      "john",
+      "micah",
+      "will",
+      "nick",
+      "david",
+      "austin",
+      "wes",
+      "patrick",
+      "kyle",
+      "jeff"
+    ],
+    "anecdotes": []
+  },
+  {
+    "year": 2015,
+    "platform": null,
+    "legacy_missing_data": false,
+    "champion": "john",
+    "standings": [
+      "john",
+      "kyle",
+      "matt",
+      "austin",
+      "will",
+      "wes",
+      "jeff",
+      "micah",
+      "nick",
+      "david"
+    ],
+    "anecdotes": []
+  },
+  {
+    "year": 2016,
+    "platform": null,
+    "legacy_missing_data": true,
+    "champion": null,
+    "standings": [],
+    "anecdotes": []
+  },
+  {
+    "year": 2017,
+    "platform": null,
+    "legacy_missing_data": false,
+    "champion": "randy",
+    "standings": [
+      "randy",
+      "kyle",
+      "stephen",
+      "brock",
+      "will",
+      "newcomer",
+      "dan",
+      "wes",
+      "nick",
+      "david"
+    ],
+    "anecdotes": []
+  },
+  {
+    "year": 2018,
+    "platform": null,
+    "legacy_missing_data": false,
+    "champion": "kyle",
+    "standings": [
+      "kyle",
+      "will",
+      "stephen",
+      "brian",
+      "nick",
+      "dan",
+      "newcomer",
+      "david",
+      "brock",
+      "wes"
+    ],
+    "anecdotes": []
+  },
+  {
+    "year": 2019,
+    "platform": null,
+    "legacy_missing_data": false,
+    "champion": "kyle",
+    "standings": [
+      "kyle",
+      "brock",
+      "david",
+      "nick",
+      "stephen",
+      "wes",
+      "will",
+      "dan",
+      "frankie",
+      "brian"
+    ],
+    "anecdotes": []
+  },
+  {
+    "year": 2020,
+    "platform": null,
+    "legacy_missing_data": false,
+    "champion": "wes",
+    "standings": [
+      "wes",
+      "nick",
+      "will",
+      "david",
+      "dan",
+      "frankie",
+      "brock",
+      "kyle",
+      "stephen",
+      "brian"
+    ],
+    "anecdotes": []
+  },
+  {
+    "year": 2021,
+    "platform": null,
+    "legacy_missing_data": false,
+    "champion": "dan",
+    "standings": [
+      "dan",
+      "kyle",
+      "brock",
+      "frankie",
+      "nick",
+      "brian",
+      "will",
+      "wes",
+      "david",
+      "stephen"
+    ],
+    "anecdotes": []
+  },
+  {
+    "year": 2022,
+    "platform": null,
+    "legacy_missing_data": false,
+    "champion": "kyle",
+    "standings": [
+      "kyle",
+      "wes",
+      "dan",
+      "stephen",
+      "nick",
+      "david",
+      "will",
+      "brock",
+      "frankie",
+      "brian"
+    ],
+    "anecdotes": []
+  },
+  {
+    "year": 2023,
+    "platform": null,
+    "legacy_missing_data": false,
+    "champion": "wes",
+    "standings": [
+      "wes",
+      "stephen",
+      "dan",
+      "david",
+      "will",
+      "kyle",
+      "alex",
+      "brock",
+      "nick",
+      "frankie"
+    ],
+    "anecdotes": []
+  },
+  {
+    "year": 2024,
+    "platform": null,
+    "legacy_missing_data": false,
+    "champion": "stephen",
+    "standings": [
+      "stephen",
+      "david",
+      "will",
+      "brock",
+      "nick",
+      "dan",
+      "jack",
+      "alex",
+      "frankie",
+      "wes"
+    ],
+    "anecdotes": []
+  }
+]

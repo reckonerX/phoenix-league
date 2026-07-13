@@ -1,0 +1,559 @@
+[
+  {
+    "slug": "kyle",
+    "display_name": "Kyle",
+    "status": "alumni",
+    "years_active": [
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "career": {
+      "wins": 117,
+      "losses": 71,
+      "games_played": 188,
+      "win_pct": 0.6223,
+      "top4_appearances": 9,
+      "championships": 4,
+      "win_pct_adjusted": 0.6106
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "austin",
+    "display_name": "Austin",
+    "status": "alumni",
+    "years_active": [
+      2011,
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "career": {
+      "wins": 54,
+      "losses": 25,
+      "games_played": 79,
+      "win_pct": 0.6835,
+      "top4_appearances": 4,
+      "championships": 2,
+      "win_pct_adjusted": 0.6464
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "john",
+    "display_name": "John",
+    "status": "alumni",
+    "years_active": [
+      2013,
+      2014,
+      2015
+    ],
+    "career": {
+      "wins": 28,
+      "losses": 18,
+      "games_played": 46,
+      "win_pct": 0.6087,
+      "top4_appearances": 2,
+      "championships": 2,
+      "win_pct_adjusted": 0.5757
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "wes",
+    "display_name": "Wes",
+    "status": "current",
+    "years_active": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "career": {
+      "wins": 88,
+      "losses": 97,
+      "games_played": 185,
+      "win_pct": 0.4757,
+      "top4_appearances": 3,
+      "championships": 2,
+      "win_pct_adjusted": 0.478
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "dan",
+    "display_name": "Dan",
+    "status": "current",
+    "years_active": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "career": {
+      "wins": 73,
+      "losses": 52,
+      "games_played": 125,
+      "win_pct": 0.584,
+      "top4_appearances": 3,
+      "championships": 1,
+      "win_pct_adjusted": 0.5724
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "randy",
+    "display_name": "Randy",
+    "status": "alumni",
+    "years_active": [
+      2017
+    ],
+    "career": {
+      "wins": 10,
+      "losses": 6,
+      "games_played": 16,
+      "win_pct": 0.625,
+      "top4_appearances": 1,
+      "championships": 1,
+      "win_pct_adjusted": 0.5554
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "stephen",
+    "display_name": "Stephen",
+    "status": "current",
+    "years_active": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "career": {
+      "wins": 71,
+      "losses": 55,
+      "games_played": 126,
+      "win_pct": 0.5635,
+      "top4_appearances": 5,
+      "championships": 1,
+      "win_pct_adjusted": 0.5548
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "matt",
+    "display_name": "Matt",
+    "status": "alumni",
+    "years_active": [
+      2015
+    ],
+    "career": {
+      "wins": 12,
+      "losses": 3,
+      "games_played": 15,
+      "win_pct": 0.8,
+      "top4_appearances": 1,
+      "championships": 0,
+      "win_pct_adjusted": 0.6284
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "patrick-1-0",
+    "display_name": "Patrick 1.0",
+    "status": "alumni",
+    "years_active": [
+      2011
+    ],
+    "career": {
+      "wins": 11,
+      "losses": 6,
+      "games_played": 17,
+      "win_pct": 0.6471,
+      "top4_appearances": 1,
+      "championships": 0,
+      "win_pct_adjusted": 0.5674
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "becca",
+    "display_name": "Becca",
+    "status": "alumni",
+    "years_active": [
+      2013
+    ],
+    "career": {
+      "wins": 9,
+      "losses": 5,
+      "games_played": 14,
+      "win_pct": 0.6429,
+      "top4_appearances": 1,
+      "championships": 0,
+      "win_pct_adjusted": 0.5587
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "will",
+    "display_name": "Will",
+    "status": "current",
+    "years_active": [
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "career": {
+      "wins": 108,
+      "losses": 97,
+      "games_played": 205,
+      "win_pct": 0.5268,
+      "top4_appearances": 5,
+      "championships": 0,
+      "win_pct_adjusted": 0.5244
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "nick",
+    "display_name": "Nick",
+    "status": "current",
+    "years_active": [
+      2013,
+      2014,
+      2015,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "career": {
+      "wins": 88,
+      "losses": 82,
+      "games_played": 170,
+      "win_pct": 0.5176,
+      "top4_appearances": 3,
+      "championships": 0,
+      "win_pct_adjusted": 0.5158
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "brock",
+    "display_name": "Brock",
+    "status": "current",
+    "years_active": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "career": {
+      "wins": 61,
+      "losses": 63,
+      "games_played": 124,
+      "win_pct": 0.4919,
+      "top4_appearances": 4,
+      "championships": 0,
+      "win_pct_adjusted": 0.493
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "micah",
+    "display_name": "Micah",
+    "status": "alumni",
+    "years_active": [
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "career": {
+      "wins": 30,
+      "losses": 33,
+      "games_played": 63,
+      "win_pct": 0.4762,
+      "top4_appearances": 3,
+      "championships": 0,
+      "win_pct_adjusted": 0.4819
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "jack",
+    "display_name": "Jack",
+    "status": "current",
+    "years_active": [
+      2024
+    ],
+    "career": {
+      "wins": 7,
+      "losses": 9,
+      "games_played": 16,
+      "win_pct": 0.4375,
+      "top4_appearances": 0,
+      "championships": 0,
+      "win_pct_adjusted": 0.4721
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "alex",
+    "display_name": "Alex",
+    "status": "current",
+    "years_active": [
+      2023,
+      2024
+    ],
+    "career": {
+      "wins": 12,
+      "losses": 18,
+      "games_played": 30,
+      "win_pct": 0.4,
+      "top4_appearances": 0,
+      "championships": 0,
+      "win_pct_adjusted": 0.4399
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "david",
+    "display_name": "David",
+    "status": "current",
+    "years_active": [
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "career": {
+      "wins": 85,
+      "losses": 120,
+      "games_played": 205,
+      "win_pct": 0.4146,
+      "top4_appearances": 5,
+      "championships": 0,
+      "win_pct_adjusted": 0.4222
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "frankie",
+    "display_name": "Frankie",
+    "status": "current",
+    "years_active": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "career": {
+      "wins": 36,
+      "losses": 57,
+      "games_played": 93,
+      "win_pct": 0.3871,
+      "top4_appearances": 1,
+      "championships": 0,
+      "win_pct_adjusted": 0.407
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "ben",
+    "display_name": "Ben",
+    "status": "alumni",
+    "years_active": [
+      2011
+    ],
+    "career": {
+      "wins": 5,
+      "losses": 12,
+      "games_played": 17,
+      "win_pct": 0.2941,
+      "top4_appearances": 0,
+      "championships": 0,
+      "win_pct_adjusted": 0.4053
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "newcomer",
+    "display_name": "Newcomer",
+    "status": "alumni",
+    "years_active": [
+      2017,
+      2018
+    ],
+    "career": {
+      "wins": 10,
+      "losses": 20,
+      "games_played": 30,
+      "win_pct": 0.3333,
+      "top4_appearances": 0,
+      "championships": 0,
+      "win_pct_adjusted": 0.3999
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "patrick",
+    "display_name": "Patrick",
+    "status": "alumni",
+    "years_active": [
+      2014
+    ],
+    "career": {
+      "wins": 4,
+      "losses": 11,
+      "games_played": 15,
+      "win_pct": 0.2667,
+      "top4_appearances": 0,
+      "championships": 0,
+      "win_pct_adjusted": 0.3999
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "brian",
+    "display_name": "Brian",
+    "status": "alumni",
+    "years_active": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022
+    ],
+    "career": {
+      "wins": 29,
+      "losses": 49,
+      "games_played": 78,
+      "win_pct": 0.3718,
+      "top4_appearances": 1,
+      "championships": 0,
+      "win_pct_adjusted": 0.3979
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "wes-1-0",
+    "display_name": "Wes 1.0",
+    "status": "alumni",
+    "years_active": [
+      2011
+    ],
+    "career": {
+      "wins": 4,
+      "losses": 13,
+      "games_played": 17,
+      "win_pct": 0.2353,
+      "top4_appearances": 0,
+      "championships": 0,
+      "win_pct_adjusted": 0.3782
+    },
+    "bio": "",
+    "photo": null
+  },
+  {
+    "slug": "jeff",
+    "display_name": "Jeff",
+    "status": "alumni",
+    "years_active": [
+      2011,
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "career": {
+      "wins": 24,
+      "losses": 55,
+      "games_played": 79,
+      "win_pct": 0.3038,
+      "top4_appearances": 0,
+      "championships": 0,
+      "win_pct_adjusted": 0.3434
+    },
+    "bio": "",
+    "photo": null
+  }
+]

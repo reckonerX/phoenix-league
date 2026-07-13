@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Current Members — Phoenix League</title>
+<link rel="icon" href="assets/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="assets/phoenix-league-logo-favicon.svg">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="roster">
+<div data-include="partials/nav.html"></div>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Current Members</h1>
+    <p>The managers competing this season.</p>
+  </div>
+</section>
+
+<main class="wrap">
+  <section id="roster-grid" class="grid"></section>
+</main>
+
+<footer class="site-footer"><div class="wrap">Phoenix League &middot; site structure in progress</div></footer>
+
+<script src="js/include.js"></script>
+<script src="js/data.js"></script>
+<script>
+(async function () {
+  const managers = (await loadManagers()).filter(m => m.status === 'current');
+  const grid = document.getElementById('roster-grid');
+  grid.innerHTML = managers.map(m => `<div class="card">
+    <h3>${m.display_name}</h3>
+    <p class="meta">Since ${Math.min(...m.years_active)}</p>
+    <p class="stat-line">${m.career.wins}-${m.career.losses} (${pct(m.career.win_pct)}) &middot; ${m.career.championships} championship${m.career.championships === 1 ? '' : 's'}</p>
+    ${m.bio ? `<p>${m.bio}</p>` : `<div class="empty-state">Bio coming soon.</div>`}
+  </div>`).join('');
+})();
+</script>
+</body>
+</html>

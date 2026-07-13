@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phoenix League</title>
+<link rel="icon" href="assets/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="assets/phoenix-league-logo-favicon.svg">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+<div data-include="partials/nav.html"></div>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Est. 2011 &middot; 14 seasons and counting</p>
+    <h1>The Phoenix League</h1>
+    <p>A dynasty fantasy league with a decade-plus of history, rivalries, and
+       stories. This page is a structural placeholder &mdash; brand, imagery,
+       and final copy are being designed separately.</p>
+  </div>
+</section>
+
+<main class="wrap">
+  <section id="latest-champion">
+    <h2>Reigning Champion</h2>
+    <div id="champion-card"></div>
+  </section>
+
+  <section id="quick-links">
+    <h2>Explore</h2>
+    <div class="grid">
+      <div class="card"><h3><a href="seasons.html">Season Archive</a></h3><p class="meta">Every year, standings, and (soon) the stories behind them.</p></div>
+      <div class="card"><h3><a href="stats.html">All-Time Stats</a></h3><p class="meta">Career records, championships, and leaderboards.</p></div>
+      <div class="card"><h3><a href="roster.html">Current Members</a></h3><p class="meta">Who's playing this season.</p></div>
+      <div class="card"><h3><a href="alumni.html">Alumni</a></h3><p class="meta">Honoring those who came before.</p></div>
+      <div class="card"><h3><a href="rulebook.html">Rulebook</a></h3><p class="meta">League rules and bylaws, cross-linked.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="wrap">Phoenix League &middot; site structure in progress</div></footer>
+
+<script src="js/include.js"></script>
+<script src="js/data.js"></script>
+<script>
+(async function () {
+  const seasons = await loadSeasons();
+  const latest = seasons.filter(s => s.champion).sort((a,b) => b.year - a.year)[0];
+  const managers = await loadManagers();
+  const el = document.getElementById('champion-card');
+  if (!latest) { el.innerHTML = '<p class="empty-state">No season data yet.</p>'; return; }
+  const m = managers.find(m => m.slug === latest.champion);
+  el.innerHTML = `<div class="card">
+    <span class="badge champion">${latest.year} Champion</span>
+    <h3>${m ? m.display_name : latest.champion}</h3>
+    <p class="meta">Career: ${m.career.wins}-${m.career.losses} (${pct(m.career.win_pct)}) &middot; ${m.career.championships} championship${m.career.championships === 1 ? '' : 's'}</p>
+  </div>`;
+})();
+</script>
+</body>
+</html>
