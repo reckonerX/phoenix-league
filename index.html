@@ -52,7 +52,7 @@
   const el = document.getElementById('champion-card');
   if (!latest) { el.innerHTML = '<p class="empty-state">No season data yet.</p>'; return; }
   const m = managers.find(m => m.slug === latest.champion);
-  el.innerHTML = `<div class="card">
+  el.innerHTML = `<div class="card champion-highlight">
     <span class="badge champion">${latest.year} Champion</span>
     <h3>${m ? m.display_name : latest.champion}</h3>
     <p class="meta">Career: ${m.career.wins}-${m.career.losses} (${pct(m.career.win_pct)}) &middot; ${m.career.championships} championship${m.career.championships === 1 ? '' : 's'}</p>

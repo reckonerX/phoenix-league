@@ -1,9 +1,3 @@
-/* =========================================================
-   PHOENIX LEAGUE — placeholder stylesheet
-   No brand decisions made yet. Every color/font below is a
-   neutral placeholder. When brand is finalized, only this
-   block of variables should need to change.
-   ========================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Public+Sans:wght@400;500;700&display=swap');
 
 :root {
@@ -90,14 +84,16 @@ header.site-header {
   border-bottom-color: var(--brand-accent);
 }
 
-/* --- Hero (placeholder) --- */
+/* --- Hero --- */
 .hero {
   padding: 48px 0;
-  background: var(--brand-bg-alt);
+  background: var(--brand-primary);
   border-bottom: 1px solid var(--brand-border);
+  color: var(--brand-text);
 }
-.hero h1 { font-size: 2.2rem; margin: 0 0 8px; }
-.hero p { max-width: 600px; color: var(--brand-secondary); }
+.hero h1 { font-size: 2.2rem; margin: 0 0 8px; color: var(--brand-text); }
+.hero p { max-width: 600px; color: var(--brand-text); opacity: 0.85; }
+.hero .eyebrow { color: var(--brand-text); opacity: 0.75; }
 
 /* --- Cards / grids --- */
 .grid {
@@ -117,6 +113,13 @@ header.site-header {
 .card h3 a:hover { color: var(--brand-accent); text-decoration: underline; }
 .card .meta { color: var(--brand-secondary); font-size: 0.85rem; margin: 0; }
 .card .stat-line { font-size: 0.85rem; margin: 4px 0 0; }
+
+.card.champion-highlight {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: var(--brand-text);
+}
+.card.champion-highlight .meta { color: var(--brand-text); opacity: 0.8; }
 
 .badge {
   display: inline-block;
