@@ -1,5 +1,3 @@
-// Injects shared partials (currently just nav) into any element
-// with [data-include]. Runs before page-specific scripts.
 async function includePartials() {
   const targets = document.querySelectorAll('[data-include]');
   await Promise.all(

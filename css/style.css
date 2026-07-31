@@ -1,24 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Public+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@400;500;600;700&display=swap');
 
 :root {
-  --brand-primary: #7A2A2E;
-  --brand-secondary: #A9812C;
-  --brand-accent: #D9601C;
-  --brand-bg: #17130F;
-  --brand-bg-alt: #211B15;
-  --brand-text: #E8DFCF;
-  --brand-border: #3B2F23;
+  --brand-primary: #F3A50F;    /* gold/orange, sampled from logo */
+  --brand-secondary: #C97F0A;  /* burnt-orange, darker sibling of primary */
+  --brand-accent: #F1EB11;     /* inner-flame yellow, sampled from logo */
+  --brand-bg: #02234C;         /* navy, sampled from logo */
+  --brand-bg-alt: #1B395E;     /* navy blended 10% toward white, card surfaces */
+  --brand-text: #FFFFFF;       /* white, sampled from logo */
+  --brand-border: #3A5373;     /* navy blended 22% toward white, hairlines */
 
-  --font-display: 'Fraunces', serif;
-  --font-body: 'Public Sans', sans-serif;
-
-  /* Seal-mark-only exceptions -- NOT for general UI use, only for
-     reproducing/extending the seal mark itself (assets/phoenix-league-logo-full.svg). */
-  --brand-primary-gradient-start: #8A3236;
-  --brand-primary-gradient-end: #661F23;
-  --brand-seal-gold: #D8B25A;
-  --brand-seal-gold-small: #B78F34;
-  --brand-seal-subtext: #CBB98F;
+  --font-display: 'Archivo Black', sans-serif;
+  --font-body: 'Barlow', sans-serif;
 
   --radius: 4px;
   --max-width: 1100px;
@@ -56,8 +48,7 @@ header.site-header {
 }
 .site-header .brand {
   font-family: var(--font-display);
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: 1.2rem;
   color: var(--brand-text);
   text-decoration: none;
   display: flex;
@@ -76,6 +67,7 @@ header.site-header {
   color: var(--brand-text);
   text-decoration: none;
   font-size: 0.95rem;
+  font-weight: 500;
   border-bottom: 2px solid transparent;
   padding-bottom: 4px;
 }
@@ -85,15 +77,16 @@ header.site-header {
 }
 
 /* --- Hero --- */
+/* Gold background needs navy text, not white - white-on-gold fails contrast (2.06:1) */
 .hero {
   padding: 48px 0;
   background: var(--brand-primary);
   border-bottom: 1px solid var(--brand-border);
-  color: var(--brand-text);
+  color: var(--brand-bg);
 }
-.hero h1 { font-size: 2.2rem; margin: 0 0 8px; color: var(--brand-text); }
-.hero p { max-width: 600px; color: var(--brand-text); opacity: 0.85; }
-.hero .eyebrow { color: var(--brand-text); opacity: 0.75; }
+.hero h1 { font-size: 2.1rem; margin: 0 0 8px; color: var(--brand-bg); }
+.hero p { max-width: 600px; color: var(--brand-bg); opacity: 0.85; }
+.hero .eyebrow { color: var(--brand-bg); opacity: 0.75; }
 
 /* --- Cards / grids --- */
 .grid {
@@ -106,7 +99,7 @@ header.site-header {
   border: 1px solid var(--brand-border);
   border-radius: var(--radius);
   padding: 16px;
-  background: var(--brand-bg);
+  background: var(--brand-bg-alt);
 }
 .card h3 { margin: 0 0 6px; font-size: 1.1rem; }
 .card h3 a { color: var(--brand-text); text-decoration: none; }
@@ -117,9 +110,10 @@ header.site-header {
 .card.champion-highlight {
   background: var(--brand-primary);
   border-color: var(--brand-primary);
-  color: var(--brand-text);
+  color: var(--brand-bg);
 }
-.card.champion-highlight .meta { color: var(--brand-text); opacity: 0.8; }
+.card.champion-highlight h3 { color: var(--brand-bg); }
+.card.champion-highlight .meta { color: var(--brand-bg); opacity: 0.8; }
 
 .badge {
   display: inline-block;
@@ -127,11 +121,11 @@ header.site-header {
   padding: 2px 8px;
   border-radius: 999px;
   background: var(--brand-bg-alt);
-  color: var(--brand-secondary);
+  color: var(--brand-text);
   border: 1px solid var(--brand-border);
   margin-right: 4px;
 }
-.badge.champion { background: var(--brand-accent); color: var(--brand-bg); border-color: var(--brand-accent); font-weight: 600; }
+.badge.champion { background: var(--brand-accent); color: var(--brand-bg); border-color: var(--brand-accent); font-weight: 700; }
 
 /* --- Tables --- */
 table { width: 100%; border-collapse: collapse; margin: 16px 0; }
@@ -146,6 +140,7 @@ main section + section { border-top: 1px solid var(--brand-border); }
   text-transform: uppercase;
   letter-spacing: 0.06em;
   font-size: 0.75rem;
+  font-weight: 600;
   color: var(--brand-secondary);
 }
 

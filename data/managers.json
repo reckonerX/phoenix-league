@@ -22,9 +22,9 @@
       "losses": 71,
       "games_played": 188,
       "win_pct": 0.6223,
+      "win_pct_adjusted": 0.6106,
       "top4_appearances": 9,
-      "championships": 4,
-      "win_pct_adjusted": 0.6106
+      "championships": 4
     },
     "bio": "",
     "photo": null
@@ -45,9 +45,9 @@
       "losses": 25,
       "games_played": 79,
       "win_pct": 0.6835,
+      "win_pct_adjusted": 0.6464,
       "top4_appearances": 4,
-      "championships": 2,
-      "win_pct_adjusted": 0.6464
+      "championships": 2
     },
     "bio": "",
     "photo": null
@@ -66,9 +66,9 @@
       "losses": 18,
       "games_played": 46,
       "win_pct": 0.6087,
+      "win_pct_adjusted": 0.5757,
       "top4_appearances": 2,
-      "championships": 2,
-      "win_pct_adjusted": 0.5757
+      "championships": 2
     },
     "bio": "",
     "photo": null
@@ -96,9 +96,9 @@
       "losses": 97,
       "games_played": 185,
       "win_pct": 0.4757,
+      "win_pct_adjusted": 0.478,
       "top4_appearances": 3,
-      "championships": 2,
-      "win_pct_adjusted": 0.478
+      "championships": 2
     },
     "bio": "",
     "photo": null
@@ -122,9 +122,9 @@
       "losses": 52,
       "games_played": 125,
       "win_pct": 0.584,
+      "win_pct_adjusted": 0.5724,
       "top4_appearances": 3,
-      "championships": 1,
-      "win_pct_adjusted": 0.5724
+      "championships": 1
     },
     "bio": "",
     "photo": null
@@ -141,9 +141,9 @@
       "losses": 6,
       "games_played": 16,
       "win_pct": 0.625,
+      "win_pct_adjusted": 0.5554,
       "top4_appearances": 1,
-      "championships": 1,
-      "win_pct_adjusted": 0.5554
+      "championships": 1
     },
     "bio": "",
     "photo": null
@@ -167,9 +167,9 @@
       "losses": 55,
       "games_played": 126,
       "win_pct": 0.5635,
+      "win_pct_adjusted": 0.5548,
       "top4_appearances": 5,
-      "championships": 1,
-      "win_pct_adjusted": 0.5548
+      "championships": 1
     },
     "bio": "",
     "photo": null
@@ -186,9 +186,9 @@
       "losses": 3,
       "games_played": 15,
       "win_pct": 0.8,
+      "win_pct_adjusted": 0.6284,
       "top4_appearances": 1,
-      "championships": 0,
-      "win_pct_adjusted": 0.6284
+      "championships": 0
     },
     "bio": "",
     "photo": null
@@ -205,9 +205,9 @@
       "losses": 6,
       "games_played": 17,
       "win_pct": 0.6471,
+      "win_pct_adjusted": 0.5674,
       "top4_appearances": 1,
-      "championships": 0,
-      "win_pct_adjusted": 0.5674
+      "championships": 0
     },
     "bio": "",
     "photo": null
@@ -224,9 +224,9 @@
       "losses": 5,
       "games_played": 14,
       "win_pct": 0.6429,
+      "win_pct_adjusted": 0.5587,
       "top4_appearances": 1,
-      "championships": 0,
-      "win_pct_adjusted": 0.5587
+      "championships": 0
     },
     "bio": "",
     "photo": null
@@ -255,9 +255,9 @@
       "losses": 97,
       "games_played": 205,
       "win_pct": 0.5268,
+      "win_pct_adjusted": 0.5244,
       "top4_appearances": 5,
-      "championships": 0,
-      "win_pct_adjusted": 0.5244
+      "championships": 0
     },
     "bio": "",
     "photo": null
@@ -284,9 +284,9 @@
       "losses": 82,
       "games_played": 170,
       "win_pct": 0.5176,
+      "win_pct_adjusted": 0.5158,
       "top4_appearances": 3,
-      "championships": 0,
-      "win_pct_adjusted": 0.5158
+      "championships": 0
     },
     "bio": "",
     "photo": null
@@ -310,9 +310,9 @@
       "losses": 63,
       "games_played": 124,
       "win_pct": 0.4919,
+      "win_pct_adjusted": 0.493,
       "top4_appearances": 4,
-      "championships": 0,
-      "win_pct_adjusted": 0.493
+      "championships": 0
     },
     "bio": "",
     "photo": null
@@ -332,9 +332,9 @@
       "losses": 33,
       "games_played": 63,
       "win_pct": 0.4762,
+      "win_pct_adjusted": 0.4819,
       "top4_appearances": 3,
-      "championships": 0,
-      "win_pct_adjusted": 0.4819
+      "championships": 0
     },
     "bio": "",
     "photo": null
@@ -351,9 +351,9 @@
       "losses": 9,
       "games_played": 16,
       "win_pct": 0.4375,
+      "win_pct_adjusted": 0.4721,
       "top4_appearances": 0,
-      "championships": 0,
-      "win_pct_adjusted": 0.4721
+      "championships": 0
     },
     "bio": "",
     "photo": null
@@ -371,9 +371,9 @@
       "losses": 18,
       "games_played": 30,
       "win_pct": 0.4,
+      "win_pct_adjusted": 0.4399,
       "top4_appearances": 0,
-      "championships": 0,
-      "win_pct_adjusted": 0.4399
+      "championships": 0
     },
     "bio": "",
     "photo": null
@@ -402,9 +402,9 @@
       "losses": 120,
       "games_played": 205,
       "win_pct": 0.4146,
+      "win_pct_adjusted": 0.4222,
       "top4_appearances": 5,
-      "championships": 0,
-      "win_pct_adjusted": 0.4222
+      "championships": 0
     },
     "bio": "",
     "photo": null
@@ -426,9 +426,9 @@
       "losses": 57,
       "games_played": 93,
       "win_pct": 0.3871,
+      "win_pct_adjusted": 0.407,
       "top4_appearances": 1,
-      "championships": 0,
-      "win_pct_adjusted": 0.407
+      "championships": 0
     },
     "bio": "",
     "photo": null
@@ -445,9 +445,9 @@
       "losses": 12,
       "games_played": 17,
       "win_pct": 0.2941,
+      "win_pct_adjusted": 0.4053,
       "top4_appearances": 0,
-      "championships": 0,
-      "win_pct_adjusted": 0.4053
+      "championships": 0
     },
     "bio": "",
     "photo": null
@@ -465,9 +465,9 @@
       "losses": 20,
       "games_played": 30,
       "win_pct": 0.3333,
+      "win_pct_adjusted": 0.3999,
       "top4_appearances": 0,
-      "championships": 0,
-      "win_pct_adjusted": 0.3999
+      "championships": 0
     },
     "bio": "",
     "photo": null
@@ -484,9 +484,9 @@
       "losses": 11,
       "games_played": 15,
       "win_pct": 0.2667,
+      "win_pct_adjusted": 0.3999,
       "top4_appearances": 0,
-      "championships": 0,
-      "win_pct_adjusted": 0.3999
+      "championships": 0
     },
     "bio": "",
     "photo": null
@@ -507,9 +507,9 @@
       "losses": 49,
       "games_played": 78,
       "win_pct": 0.3718,
+      "win_pct_adjusted": 0.3979,
       "top4_appearances": 1,
-      "championships": 0,
-      "win_pct_adjusted": 0.3979
+      "championships": 0
     },
     "bio": "",
     "photo": null
@@ -526,9 +526,9 @@
       "losses": 13,
       "games_played": 17,
       "win_pct": 0.2353,
+      "win_pct_adjusted": 0.3782,
       "top4_appearances": 0,
-      "championships": 0,
-      "win_pct_adjusted": 0.3782
+      "championships": 0
     },
     "bio": "",
     "photo": null
@@ -549,9 +549,9 @@
       "losses": 55,
       "games_played": 79,
       "win_pct": 0.3038,
+      "win_pct_adjusted": 0.3434,
       "top4_appearances": 0,
-      "championships": 0,
-      "win_pct_adjusted": 0.3434
+      "championships": 0
     },
     "bio": "",
     "photo": null
