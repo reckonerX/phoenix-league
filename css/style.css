@@ -80,11 +80,28 @@ header.site-header {
 /* Navy-dominant, gold as accent only - matches the logo's own color
    proportions (mostly navy, gold/yellow used sparingly for the mark). */
 .hero {
+  position: relative;
+  overflow: hidden;
   padding: 48px 0;
   background: linear-gradient(180deg, var(--brand-bg-alt), var(--brand-bg));
   border-bottom: 3px solid var(--brand-primary);
   color: var(--brand-text);
 }
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  right: -5%;
+  width: 480px;
+  height: 480px;
+  background-image: url('../assets/phoenix-league-logo-full.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.07;
+  pointer-events: none;
+}
+.hero .wrap { position: relative; z-index: 1; }
 .hero h1 { font-size: 2.1rem; margin: 0 0 8px; color: var(--brand-text); }
 .hero p { max-width: 600px; color: var(--brand-text); opacity: 0.8; }
 .hero .eyebrow { color: var(--brand-primary); opacity: 1; }
@@ -101,6 +118,12 @@ header.site-header {
   border-radius: var(--radius);
   padding: 16px;
   background: var(--brand-bg-alt);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.card:has(a):hover {
+  transform: translateY(-3px);
+  border-color: var(--brand-primary);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 .card h3 { margin: 0 0 6px; font-size: 1.1rem; }
 .card h3 a { color: var(--brand-text); text-decoration: none; }
@@ -136,7 +159,20 @@ tr:hover td { background: var(--brand-bg-alt); }
 
 /* --- Section headers --- */
 main section { padding: 32px 0; }
-main section + section { border-top: 1px solid var(--brand-border); }
+main section + section {
+  border-top: none;
+  position: relative;
+}
+main section + section::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--brand-border) 20%, var(--brand-border) 80%, transparent);
+}
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.06em;
