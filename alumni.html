@@ -20,6 +20,14 @@
 </section>
 
 <main class="wrap">
+  <input type="text" class="filter-input" id="alumni-filter" placeholder="Filter by name...">
+  <select class="sort-select" id="alumni-sort">
+    <option value="tenure">Sort by: Tenure (longest first)</option>
+    <option value="wins">Sort by: Career Wins</option>
+    <option value="winpct">Sort by: Win %</option>
+    <option value="championships">Sort by: Championships</option>
+    <option value="alpha">Sort by: Name (A-Z)</option>
+  </select>
   <section id="alumni-grid" class="grid"></section>
 </main>
 
@@ -29,16 +37,38 @@
 <script src="js/data.js"></script>
 <script>
 (async function () {
-  const managers = (await loadManagers())
-    .filter(m => m.status === 'alumni')
-    .sort((a, b) => b.years_active.length - a.years_active.length);
+  const managers = (await loadManagers()).filter(m => m.status === 'alumni');
   const grid = document.getElementById('alumni-grid');
-  grid.innerHTML = managers.map(m => `<div class="card">
-    <h3>${m.display_name}</h3>
-    <p class="meta">${Math.min(...m.years_active)}&ndash;${Math.max(...m.years_active)} &middot; ${m.years_active.length} season${m.years_active.length === 1 ? '' : 's'}</p>
-    <p class="stat-line">${m.career.wins}-${m.career.losses} (${pct(m.career.win_pct)}) &middot; ${m.career.championships} championship${m.career.championships === 1 ? '' : 's'}</p>
-    ${m.bio ? `<p>${m.bio}</p>` : `<div class="empty-state">Bio coming soon.</div>`}
-  </div>`).join('');
+
+  function render(sorted) {
+    grid.innerHTML = sorted.map(m => `<div class="card alumni-card">
+      <h3>${m.display_name}</h3>
+      <p class="meta">${Math.min(...m.years_active)}&ndash;${Math.max(...m.years_active)} &middot; ${m.years_active.length} season${m.years_active.length === 1 ? '' : 's'}</p>
+      <p class="stat-line">${m.career.wins}-${m.career.losses} (${pct(m.career.win_pct)}) &middot; ${m.career.championships} championship${m.career.championships === 1 ? '' : 's'}</p>
+      ${m.bio ? `<p>${m.bio}</p>` : `<div class="empty-state">Bio coming soon.</div>`}
+    </div>`).join('');
+  }
+
+  const sorters = {
+    tenure: (a, b) => b.years_active.length - a.years_active.length,
+    wins: (a, b) => b.career.wins - a.career.wins,
+    winpct: (a, b) => b.career.win_pct - a.career.win_pct,
+    championships: (a, b) => b.career.championships - a.career.championships,
+    alpha: (a, b) => a.display_name.localeCompare(b.display_name),
+  };
+
+  render([...managers].sort(sorters.tenure));
+
+  document.getElementById('alumni-sort').addEventListener('change', (e) => {
+    render([...managers].sort(sorters[e.target.value]));
+  });
+
+  document.getElementById('alumni-filter').addEventListener('input', (e) => {
+    const q = e.target.value.trim().toLowerCase();
+    grid.querySelectorAll('.alumni-card').forEach(card => {
+      card.style.display = card.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
 })();
 </script>
 </body>

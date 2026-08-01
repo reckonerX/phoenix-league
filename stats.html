@@ -17,13 +17,14 @@
     <h1>All-Time Stats</h1>
     <p>Career records across every manager. "Weighted %" adjusts for sample size
        so a couple of hot seasons don't outrank a decade of consistency &mdash;
-       "Raw %" is the simple number.</p>
+       "Raw %" is the simple number. Click any column header to sort.</p>
   </div>
 </section>
 
 <main class="wrap">
   <section id="championships-table">
     <h2>Championships</h2>
+    <input type="text" class="filter-input" id="champ-filter" placeholder="Filter by manager name...">
     <table id="champ-table"><thead>
       <tr><th>Manager</th><th>Championships</th><th>Top-4 Finishes</th><th>Seasons Played</th></tr>
     </thead><tbody></tbody></table>
@@ -31,6 +32,7 @@
 
   <section id="winpct-table">
     <h2>Win % Leaderboard</h2>
+    <input type="text" class="filter-input" id="wp-filter" placeholder="Filter by manager name...">
     <table id="wp-table"><thead>
       <tr><th>Manager</th><th>Record</th><th>Raw %</th><th>Weighted %</th><th>Games</th></tr>
     </thead><tbody></tbody></table>
@@ -41,6 +43,7 @@
 
 <script src="js/include.js"></script>
 <script src="js/data.js"></script>
+<script src="js/interactive.js"></script>
 <script>
 (async function () {
   const managers = await loadManagers();
@@ -50,9 +53,9 @@
     .sort((a, b) => b.career.championships - a.career.championships || b.career.top4_appearances - a.career.top4_appearances)
     .map(m => `<tr>
       <td>${m.display_name}</td>
-      <td>${m.career.championships}</td>
-      <td>${m.career.top4_appearances}</td>
-      <td>${m.years_active.length}</td>
+      <td data-sort="${m.career.championships}">${m.career.championships}</td>
+      <td data-sort="${m.career.top4_appearances}">${m.career.top4_appearances}</td>
+      <td data-sort="${m.years_active.length}">${m.years_active.length}</td>
     </tr>`).join('');
 
   const wpBody = document.querySelector('#wp-table tbody');
@@ -60,11 +63,25 @@
     .sort((a, b) => b.career.win_pct_adjusted - a.career.win_pct_adjusted)
     .map(m => `<tr>
       <td>${m.display_name}</td>
-      <td>${m.career.wins}-${m.career.losses}</td>
-      <td>${pct(m.career.win_pct)}</td>
-      <td>${pct(m.career.win_pct_adjusted)}</td>
-      <td>${m.career.games_played}</td>
+      <td data-sort="${m.career.wins - m.career.losses}">${m.career.wins}-${m.career.losses}</td>
+      <td data-sort="${m.career.win_pct}">${pct(m.career.win_pct)}</td>
+      <td data-sort="${m.career.win_pct_adjusted}">${pct(m.career.win_pct_adjusted)}</td>
+      <td data-sort="${m.career.games_played}">${m.career.games_played}</td>
     </tr>`).join('');
+
+  makeSortable(document.getElementById('champ-table'));
+  makeSortable(document.getElementById('wp-table'));
+
+  wireFilter(
+    document.getElementById('champ-filter'),
+    Array.from(champBody.querySelectorAll('tr')),
+    row => row.children[0].textContent
+  );
+  wireFilter(
+    document.getElementById('wp-filter'),
+    Array.from(wpBody.querySelectorAll('tr')),
+    row => row.children[0].textContent
+  );
 })();
 </script>
 </body>

@@ -20,6 +20,13 @@
 </section>
 
 <main class="wrap">
+  <select class="sort-select" id="roster-sort">
+    <option value="tenure">Sort by: Tenure (longest first)</option>
+    <option value="wins">Sort by: Career Wins</option>
+    <option value="winpct">Sort by: Win %</option>
+    <option value="championships">Sort by: Championships</option>
+    <option value="alpha">Sort by: Name (A-Z)</option>
+  </select>
   <section id="roster-grid" class="grid"></section>
 </main>
 
@@ -31,12 +38,29 @@
 (async function () {
   const managers = (await loadManagers()).filter(m => m.status === 'current');
   const grid = document.getElementById('roster-grid');
-  grid.innerHTML = managers.map(m => `<div class="card">
-    <h3>${m.display_name}</h3>
-    <p class="meta">Since ${Math.min(...m.years_active)}</p>
-    <p class="stat-line">${m.career.wins}-${m.career.losses} (${pct(m.career.win_pct)}) &middot; ${m.career.championships} championship${m.career.championships === 1 ? '' : 's'}</p>
-    ${m.bio ? `<p>${m.bio}</p>` : `<div class="empty-state">Bio coming soon.</div>`}
-  </div>`).join('');
+
+  function render(sorted) {
+    grid.innerHTML = sorted.map(m => `<div class="card">
+      <h3>${m.display_name}</h3>
+      <p class="meta">Since ${Math.min(...m.years_active)}</p>
+      <p class="stat-line">${m.career.wins}-${m.career.losses} (${pct(m.career.win_pct)}) &middot; ${m.career.championships} championship${m.career.championships === 1 ? '' : 's'}</p>
+      ${m.bio ? `<p>${m.bio}</p>` : `<div class="empty-state">Bio coming soon.</div>`}
+    </div>`).join('');
+  }
+
+  const sorters = {
+    tenure: (a, b) => Math.min(...a.years_active) - Math.min(...b.years_active),
+    wins: (a, b) => b.career.wins - a.career.wins,
+    winpct: (a, b) => b.career.win_pct - a.career.win_pct,
+    championships: (a, b) => b.career.championships - a.career.championships,
+    alpha: (a, b) => a.display_name.localeCompare(b.display_name),
+  };
+
+  render([...managers].sort(sorters.tenure));
+
+  document.getElementById('roster-sort').addEventListener('change', (e) => {
+    render([...managers].sort(sorters[e.target.value]));
+  });
 })();
 </script>
 </body>

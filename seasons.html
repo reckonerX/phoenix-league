@@ -20,6 +20,7 @@
 </section>
 
 <main class="wrap">
+  <input type="text" class="filter-input" id="season-filter" placeholder="Filter by year, champion, or platform...">
   <section id="season-list"></section>
 </main>
 
@@ -27,6 +28,7 @@
 
 <script src="js/include.js"></script>
 <script src="js/data.js"></script>
+<script src="js/interactive.js"></script>
 <script>
 (async function () {
   const seasons = (await loadSeasons()).sort((a, b) => b.year - a.year);
@@ -36,17 +38,17 @@
   const container = document.getElementById('season-list');
   container.innerHTML = seasons.map(s => {
     if (s.legacy_missing_data) {
-      return `<div class="card" style="margin-bottom:16px;">
+      return `<div class="card season-card" style="margin-bottom:16px;">
         <span class="badge">${s.year}</span>
         <span class="badge">Legacy Season &mdash; records unrecovered</span>
         <h3>${s.year}</h3>
-        <p class="meta">This season was played, but standings data has not been recovered yet.
-        Platform and full results are being investigated.</p>
+        <p class="meta">This season was played on ${s.platform || 'an unknown platform'},
+        but standings data has not been recovered yet.</p>
       </div>`;
     }
     const standingsList = s.standings.map((slug, i) =>
       `<li>${i + 1}. ${nameOf(slug)}</li>`).join('');
-    return `<div class="card" style="margin-bottom:16px;">
+    return `<div class="card season-card" style="margin-bottom:16px;">
       <span class="badge champion">${s.year} Champion: ${nameOf(s.champion)}</span>
       <span class="badge">Platform: ${s.platform || 'TBD'}</span>
       <h3>${s.year} Season</h3>
@@ -59,6 +61,12 @@
         : `<div class="empty-state" style="margin-top:10px;">No stories submitted yet for this season.</div>`}
     </div>`;
   }).join('');
+
+  wireFilter(
+    document.getElementById('season-filter'),
+    Array.from(container.querySelectorAll('.season-card')),
+    card => card.textContent
+  );
 })();
 </script>
 </body>

@@ -1,7 +1,7 @@
 [
   {
     "year": 2011,
-    "platform": null,
+    "platform": "NFL.com Fantasy",
     "legacy_missing_data": false,
     "champion": "austin",
     "standings": [
@@ -52,7 +52,7 @@
   },
   {
     "year": 2012,
-    "platform": null,
+    "platform": "NFL.com Fantasy",
     "legacy_missing_data": false,
     "champion": "austin",
     "standings": [
@@ -99,7 +99,7 @@
   },
   {
     "year": 2013,
-    "platform": null,
+    "platform": "NFL.com Fantasy",
     "legacy_missing_data": false,
     "champion": "kyle",
     "standings": [
@@ -160,7 +160,7 @@
   },
   {
     "year": 2014,
-    "platform": null,
+    "platform": "NFL.com Fantasy",
     "legacy_missing_data": false,
     "champion": "john",
     "standings": [
@@ -221,7 +221,7 @@
   },
   {
     "year": 2015,
-    "platform": null,
+    "platform": "NFL.com Fantasy",
     "legacy_missing_data": false,
     "champion": "john",
     "standings": [
@@ -282,7 +282,7 @@
   },
   {
     "year": 2016,
-    "platform": null,
+    "platform": "NFL.com Fantasy",
     "legacy_missing_data": true,
     "champion": null,
     "standings": [],
@@ -291,7 +291,7 @@
   },
   {
     "year": 2017,
-    "platform": null,
+    "platform": "Yahoo",
     "legacy_missing_data": false,
     "champion": "randy",
     "standings": [
@@ -352,7 +352,7 @@
   },
   {
     "year": 2018,
-    "platform": null,
+    "platform": "Yahoo",
     "legacy_missing_data": false,
     "champion": "kyle",
     "standings": [
@@ -413,7 +413,7 @@
   },
   {
     "year": 2019,
-    "platform": null,
+    "platform": "Yahoo",
     "legacy_missing_data": false,
     "champion": "kyle",
     "standings": [
@@ -474,7 +474,7 @@
   },
   {
     "year": 2020,
-    "platform": null,
+    "platform": "Yahoo",
     "legacy_missing_data": false,
     "champion": "wes",
     "standings": [
@@ -535,7 +535,7 @@
   },
   {
     "year": 2021,
-    "platform": null,
+    "platform": "Yahoo",
     "legacy_missing_data": false,
     "champion": "dan",
     "standings": [
@@ -596,7 +596,7 @@
   },
   {
     "year": 2022,
-    "platform": null,
+    "platform": "Yahoo",
     "legacy_missing_data": false,
     "champion": "kyle",
     "standings": [
@@ -657,7 +657,7 @@
   },
   {
     "year": 2023,
-    "platform": null,
+    "platform": "Yahoo",
     "legacy_missing_data": false,
     "champion": "wes",
     "standings": [
@@ -718,7 +718,7 @@
   },
   {
     "year": 2024,
-    "platform": null,
+    "platform": "Sleeper",
     "legacy_missing_data": false,
     "champion": "stephen",
     "standings": [
