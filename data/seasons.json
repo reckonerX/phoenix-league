@@ -14,6 +14,40 @@
       "david",
       "wes-1-0"
     ],
+    "records": {
+      "will": {
+        "wins": 12,
+        "losses": 5
+      },
+      "david": {
+        "wins": 7,
+        "losses": 10
+      },
+      "kyle": {
+        "wins": 8,
+        "losses": 8
+      },
+      "austin": {
+        "wins": 14,
+        "losses": 3
+      },
+      "jeff": {
+        "wins": 6,
+        "losses": 11
+      },
+      "patrick-1-0": {
+        "wins": 11,
+        "losses": 6
+      },
+      "ben": {
+        "wins": 5,
+        "losses": 12
+      },
+      "wes-1-0": {
+        "wins": 4,
+        "losses": 13
+      }
+    },
     "anecdotes": []
   },
   {
@@ -31,6 +65,36 @@
       "madison",
       "jeff"
     ],
+    "records": {
+      "will": {
+        "wins": 8,
+        "losses": 8
+      },
+      "wes": {
+        "wins": 7,
+        "losses": 9
+      },
+      "david": {
+        "wins": 9,
+        "losses": 7
+      },
+      "kyle": {
+        "wins": 10,
+        "losses": 5
+      },
+      "austin": {
+        "wins": 12,
+        "losses": 4
+      },
+      "jeff": {
+        "wins": 2,
+        "losses": 14
+      },
+      "micah": {
+        "wins": 7,
+        "losses": 9
+      }
+    },
     "anecdotes": []
   },
   {
@@ -50,6 +114,48 @@
       "wes",
       "john"
     ],
+    "records": {
+      "will": {
+        "wins": 6,
+        "losses": 10
+      },
+      "wes": {
+        "wins": 8,
+        "losses": 6
+      },
+      "nick": {
+        "wins": 6,
+        "losses": 10
+      },
+      "david": {
+        "wins": 4,
+        "losses": 12
+      },
+      "kyle": {
+        "wins": 12,
+        "losses": 4
+      },
+      "austin": {
+        "wins": 10,
+        "losses": 5
+      },
+      "john": {
+        "wins": 8,
+        "losses": 6
+      },
+      "jeff": {
+        "wins": 4,
+        "losses": 12
+      },
+      "micah": {
+        "wins": 9,
+        "losses": 7
+      },
+      "becca": {
+        "wins": 9,
+        "losses": 5
+      }
+    },
     "anecdotes": []
   },
   {
@@ -69,6 +175,48 @@
       "kyle",
       "jeff"
     ],
+    "records": {
+      "will": {
+        "wins": 8,
+        "losses": 7
+      },
+      "wes": {
+        "wins": 8,
+        "losses": 7
+      },
+      "nick": {
+        "wins": 10,
+        "losses": 5
+      },
+      "david": {
+        "wins": 7,
+        "losses": 8
+      },
+      "kyle": {
+        "wins": 6,
+        "losses": 9
+      },
+      "austin": {
+        "wins": 7,
+        "losses": 8
+      },
+      "john": {
+        "wins": 10,
+        "losses": 6
+      },
+      "jeff": {
+        "wins": 6,
+        "losses": 9
+      },
+      "micah": {
+        "wins": 10,
+        "losses": 6
+      },
+      "patrick": {
+        "wins": 4,
+        "losses": 11
+      }
+    },
     "anecdotes": []
   },
   {
@@ -88,6 +236,48 @@
       "nick",
       "david"
     ],
+    "records": {
+      "will": {
+        "wins": 8,
+        "losses": 7
+      },
+      "wes": {
+        "wins": 5,
+        "losses": 10
+      },
+      "nick": {
+        "wins": 5,
+        "losses": 10
+      },
+      "david": {
+        "wins": 4,
+        "losses": 11
+      },
+      "kyle": {
+        "wins": 11,
+        "losses": 4
+      },
+      "matt": {
+        "wins": 12,
+        "losses": 3
+      },
+      "austin": {
+        "wins": 11,
+        "losses": 5
+      },
+      "john": {
+        "wins": 10,
+        "losses": 6
+      },
+      "jeff": {
+        "wins": 6,
+        "losses": 9
+      },
+      "micah": {
+        "wins": 4,
+        "losses": 11
+      }
+    },
     "anecdotes": []
   },
   {
@@ -96,6 +286,7 @@
     "legacy_missing_data": true,
     "champion": null,
     "standings": [],
+    "records": {},
     "anecdotes": []
   },
   {
@@ -115,6 +306,48 @@
       "nick",
       "david"
     ],
+    "records": {
+      "stephen": {
+        "wins": 12,
+        "losses": 3
+      },
+      "dan": {
+        "wins": 8,
+        "losses": 7
+      },
+      "will": {
+        "wins": 8,
+        "losses": 7
+      },
+      "brock": {
+        "wins": 8,
+        "losses": 7
+      },
+      "wes": {
+        "wins": 5,
+        "losses": 10
+      },
+      "nick": {
+        "wins": 5,
+        "losses": 10
+      },
+      "david": {
+        "wins": 2,
+        "losses": 13
+      },
+      "randy": {
+        "wins": 10,
+        "losses": 6
+      },
+      "newcomer": {
+        "wins": 6,
+        "losses": 9
+      },
+      "kyle": {
+        "wins": 12,
+        "losses": 4
+      }
+    },
     "anecdotes": []
   },
   {
@@ -134,6 +367,48 @@
       "brock",
       "wes"
     ],
+    "records": {
+      "stephen": {
+        "wins": 8,
+        "losses": 8
+      },
+      "dan": {
+        "wins": 7,
+        "losses": 8
+      },
+      "will": {
+        "wins": 9,
+        "losses": 6
+      },
+      "brock": {
+        "wins": 7,
+        "losses": 8
+      },
+      "wes": {
+        "wins": 6,
+        "losses": 9
+      },
+      "nick": {
+        "wins": 10,
+        "losses": 5
+      },
+      "david": {
+        "wins": 5,
+        "losses": 10
+      },
+      "newcomer": {
+        "wins": 4,
+        "losses": 11
+      },
+      "kyle": {
+        "wins": 12,
+        "losses": 3
+      },
+      "brian": {
+        "wins": 8,
+        "losses": 8
+      }
+    },
     "anecdotes": []
   },
   {
@@ -153,6 +428,48 @@
       "frankie",
       "brian"
     ],
+    "records": {
+      "stephen": {
+        "wins": 9,
+        "losses": 6
+      },
+      "dan": {
+        "wins": 7,
+        "losses": 8
+      },
+      "will": {
+        "wins": 8,
+        "losses": 8
+      },
+      "brock": {
+        "wins": 11,
+        "losses": 4
+      },
+      "wes": {
+        "wins": 6,
+        "losses": 9
+      },
+      "nick": {
+        "wins": 9,
+        "losses": 7
+      },
+      "david": {
+        "wins": 8,
+        "losses": 8
+      },
+      "frankie": {
+        "wins": 3,
+        "losses": 12
+      },
+      "kyle": {
+        "wins": 12,
+        "losses": 3
+      },
+      "brian": {
+        "wins": 4,
+        "losses": 11
+      }
+    },
     "anecdotes": []
   },
   {
@@ -172,6 +489,48 @@
       "stephen",
       "brian"
     ],
+    "records": {
+      "stephen": {
+        "wins": 5,
+        "losses": 10
+      },
+      "dan": {
+        "wins": 8,
+        "losses": 7
+      },
+      "will": {
+        "wins": 10,
+        "losses": 5
+      },
+      "brock": {
+        "wins": 8,
+        "losses": 7
+      },
+      "wes": {
+        "wins": 10,
+        "losses": 6
+      },
+      "nick": {
+        "wins": 10,
+        "losses": 6
+      },
+      "david": {
+        "wins": 7,
+        "losses": 8
+      },
+      "frankie": {
+        "wins": 7,
+        "losses": 8
+      },
+      "kyle": {
+        "wins": 7,
+        "losses": 8
+      },
+      "brian": {
+        "wins": 4,
+        "losses": 11
+      }
+    },
     "anecdotes": []
   },
   {
@@ -191,6 +550,48 @@
       "david",
       "stephen"
     ],
+    "records": {
+      "stephen": {
+        "wins": 5,
+        "losses": 11
+      },
+      "dan": {
+        "wins": 15,
+        "losses": 1
+      },
+      "will": {
+        "wins": 7,
+        "losses": 9
+      },
+      "brock": {
+        "wins": 9,
+        "losses": 8
+      },
+      "wes": {
+        "wins": 7,
+        "losses": 9
+      },
+      "nick": {
+        "wins": 11,
+        "losses": 5
+      },
+      "david": {
+        "wins": 5,
+        "losses": 11
+      },
+      "frankie": {
+        "wins": 8,
+        "losses": 9
+      },
+      "kyle": {
+        "wins": 8,
+        "losses": 9
+      },
+      "brian": {
+        "wins": 7,
+        "losses": 9
+      }
+    },
     "anecdotes": []
   },
   {
@@ -210,6 +611,48 @@
       "frankie",
       "brian"
     ],
+    "records": {
+      "stephen": {
+        "wins": 10,
+        "losses": 7
+      },
+      "dan": {
+        "wins": 10,
+        "losses": 6
+      },
+      "will": {
+        "wins": 7,
+        "losses": 9
+      },
+      "brock": {
+        "wins": 4,
+        "losses": 12
+      },
+      "wes": {
+        "wins": 10,
+        "losses": 6
+      },
+      "nick": {
+        "wins": 9,
+        "losses": 7
+      },
+      "david": {
+        "wins": 8,
+        "losses": 8
+      },
+      "frankie": {
+        "wins": 6,
+        "losses": 10
+      },
+      "kyle": {
+        "wins": 11,
+        "losses": 6
+      },
+      "brian": {
+        "wins": 6,
+        "losses": 10
+      }
+    },
     "anecdotes": []
   },
   {
@@ -229,6 +672,48 @@
       "nick",
       "frankie"
     ],
+    "records": {
+      "stephen": {
+        "wins": 12,
+        "losses": 4
+      },
+      "dan": {
+        "wins": 9,
+        "losses": 8
+      },
+      "will": {
+        "wins": 7,
+        "losses": 9
+      },
+      "brock": {
+        "wins": 6,
+        "losses": 8
+      },
+      "wes": {
+        "wins": 11,
+        "losses": 5
+      },
+      "nick": {
+        "wins": 5,
+        "losses": 9
+      },
+      "david": {
+        "wins": 9,
+        "losses": 8
+      },
+      "frankie": {
+        "wins": 4,
+        "losses": 10
+      },
+      "alex": {
+        "wins": 6,
+        "losses": 8
+      },
+      "kyle": {
+        "wins": 8,
+        "losses": 8
+      }
+    },
     "anecdotes": []
   },
   {
@@ -248,6 +733,109 @@
       "frankie",
       "wes"
     ],
+    "records": {
+      "stephen": {
+        "wins": 10,
+        "losses": 6
+      },
+      "dan": {
+        "wins": 9,
+        "losses": 7
+      },
+      "will": {
+        "wins": 10,
+        "losses": 7
+      },
+      "brock": {
+        "wins": 8,
+        "losses": 9
+      },
+      "wes": {
+        "wins": 5,
+        "losses": 11
+      },
+      "nick": {
+        "wins": 8,
+        "losses": 8
+      },
+      "david": {
+        "wins": 10,
+        "losses": 6
+      },
+      "frankie": {
+        "wins": 8,
+        "losses": 8
+      },
+      "alex": {
+        "wins": 6,
+        "losses": 10
+      },
+      "jack": {
+        "wins": 7,
+        "losses": 9
+      }
+    },
+    "anecdotes": []
+  },
+  {
+    "year": 2025,
+    "platform": "Sleeper",
+    "legacy_missing_data": false,
+    "champion": "stephen",
+    "standings": [
+      "stephen",
+      "david",
+      "nick",
+      "will",
+      "alex",
+      "brock",
+      "wes",
+      "dan",
+      "frankie",
+      "jack"
+    ],
+    "records": {
+      "stephen": {
+        "wins": 11,
+        "losses": 5
+      },
+      "dan": {
+        "wins": 7,
+        "losses": 9
+      },
+      "will": {
+        "wins": 9,
+        "losses": 8
+      },
+      "brock": {
+        "wins": 7,
+        "losses": 9
+      },
+      "wes": {
+        "wins": 6,
+        "losses": 10
+      },
+      "nick": {
+        "wins": 9,
+        "losses": 8
+      },
+      "david": {
+        "wins": 10,
+        "losses": 6
+      },
+      "frankie": {
+        "wins": 6,
+        "losses": 10
+      },
+      "alex": {
+        "wins": 9,
+        "losses": 7
+      },
+      "jack": {
+        "wins": 7,
+        "losses": 9
+      }
+    },
     "anecdotes": []
   }
 ]

@@ -27,6 +27,15 @@ body {
 }
 
 h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; }
+h4 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--brand-primary);
+  margin: 24px 0 8px;
+}
 
 .wrap {
   max-width: var(--max-width);
