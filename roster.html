@@ -20,6 +20,14 @@
 </section>
 
 <main class="wrap">
+  <section id="group-photo-section">
+    <img class="group-photo" id="group-photo-img" src="assets/photos/group-photo.jpg" alt="League group photo" style="display:none;">
+    <div class="group-photo-placeholder" id="group-photo-fallback">
+      Group photo coming soon &mdash; drop the annual draft-day photo in as
+      <code>assets/photos/group-photo.jpg</code> and it'll show up here automatically.
+    </div>
+  </section>
+
   <select class="sort-select" id="roster-sort">
     <option value="tenure">Sort by: Tenure (longest first)</option>
     <option value="wins">Sort by: Career Wins</option>
@@ -35,16 +43,30 @@
 <script src="js/include.js"></script>
 <script src="js/data.js"></script>
 <script>
+// Group photo: only show the <img> if it actually loads, otherwise
+// leave the placeholder text visible (already the default state).
+(function () {
+  const img = document.getElementById('group-photo-img');
+  const fallback = document.getElementById('group-photo-fallback');
+  img.addEventListener('load', () => { img.style.display = ''; fallback.style.display = 'none'; });
+  img.addEventListener('error', () => { img.style.display = 'none'; fallback.style.display = ''; });
+})();
+
 (async function () {
   const managers = (await loadManagers()).filter(m => m.status === 'current');
   const grid = document.getElementById('roster-grid');
 
   function render(sorted) {
     grid.innerHTML = sorted.map(m => `<div class="card">
+      ${avatarHTML(m)}
       <h3>${m.display_name}</h3>
       <p class="meta">Since ${Math.min(...m.years_active)}</p>
-      <p class="stat-line">${m.career.wins}-${m.career.losses} (${pct(m.career.win_pct)}) &middot; ${m.career.championships} championship${m.career.championships === 1 ? '' : 's'}</p>
-      ${m.bio ? `<p>${m.bio}</p>` : `<div class="empty-state">Bio coming soon.</div>`}
+      <p class="stat-line">${m.career.wins}-${m.career.losses} (${pct(m.career.win_pct)})</p>
+      <p class="stat-line">${m.career.championships} championship${m.career.championships === 1 ? '' : 's'}
+         &middot; ${m.career.championship_appearances} title game${m.career.championship_appearances === 1 ? '' : 's'}
+         (${m.career.runner_up_finishes} runner-up)</p>
+      <p class="stat-line">Playoffs: ${m.career.playoff_appearances}/${m.years_active.length} seasons</p>
+      <p class="stat-line">Best: ${ordinal(m.career.best_finish)} &middot; Worst: ${ordinal(m.career.worst_finish)}</p>
     </div>`).join('');
   }
 

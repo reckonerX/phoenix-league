@@ -23,10 +23,13 @@
       "games_played": 188,
       "win_pct": 0.6223,
       "win_pct_adjusted": 0.6106,
-      "top4_appearances": 9,
-      "championships": 4
+      "championships": 4,
+      "championship_appearances": 7,
+      "runner_up_finishes": 3,
+      "playoff_appearances": 10,
+      "best_finish": 1,
+      "worst_finish": 9
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -46,10 +49,13 @@
       "games_played": 79,
       "win_pct": 0.6835,
       "win_pct_adjusted": 0.6464,
-      "top4_appearances": 4,
-      "championships": 2
+      "championships": 2,
+      "championship_appearances": 2,
+      "runner_up_finishes": 0,
+      "playoff_appearances": 5,
+      "best_finish": 1,
+      "worst_finish": 6
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -67,10 +73,13 @@
       "games_played": 46,
       "win_pct": 0.6087,
       "win_pct_adjusted": 0.5757,
-      "top4_appearances": 2,
-      "championships": 2
+      "championships": 2,
+      "championship_appearances": 2,
+      "runner_up_finishes": 0,
+      "playoff_appearances": 2,
+      "best_finish": 1,
+      "worst_finish": 10
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -94,10 +103,13 @@
       "games_played": 142,
       "win_pct": 0.5775,
       "win_pct_adjusted": 0.5679,
-      "top4_appearances": 6,
-      "championships": 2
+      "championships": 2,
+      "championship_appearances": 3,
+      "runner_up_finishes": 1,
+      "playoff_appearances": 7,
+      "best_finish": 1,
+      "worst_finish": 10
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -125,10 +137,13 @@
       "games_played": 201,
       "win_pct": 0.4677,
       "win_pct_adjusted": 0.4706,
-      "top4_appearances": 3,
-      "championships": 2
+      "championships": 2,
+      "championship_appearances": 3,
+      "runner_up_finishes": 1,
+      "playoff_appearances": 6,
+      "best_finish": 1,
+      "worst_finish": 10
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -152,10 +167,13 @@
       "games_played": 141,
       "win_pct": 0.5674,
       "win_pct_adjusted": 0.559,
-      "top4_appearances": 3,
-      "championships": 1
+      "championships": 1,
+      "championship_appearances": 1,
+      "runner_up_finishes": 0,
+      "playoff_appearances": 6,
+      "best_finish": 1,
+      "worst_finish": 8
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -171,10 +189,13 @@
       "games_played": 16,
       "win_pct": 0.625,
       "win_pct_adjusted": 0.5554,
-      "top4_appearances": 1,
-      "championships": 1
+      "championships": 1,
+      "championship_appearances": 1,
+      "runner_up_finishes": 0,
+      "playoff_appearances": 1,
+      "best_finish": 1,
+      "worst_finish": 1
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -190,10 +211,13 @@
       "games_played": 15,
       "win_pct": 0.8,
       "win_pct_adjusted": 0.6284,
-      "top4_appearances": 1,
-      "championships": 0
+      "championships": 0,
+      "championship_appearances": 0,
+      "runner_up_finishes": 0,
+      "playoff_appearances": 1,
+      "best_finish": 3,
+      "worst_finish": 3
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -209,10 +233,13 @@
       "games_played": 17,
       "win_pct": 0.6471,
       "win_pct_adjusted": 0.5674,
-      "top4_appearances": 1,
-      "championships": 0
+      "championships": 0,
+      "championship_appearances": 0,
+      "runner_up_finishes": 0,
+      "playoff_appearances": 1,
+      "best_finish": 4,
+      "worst_finish": 4
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -228,10 +255,13 @@
       "games_played": 14,
       "win_pct": 0.6429,
       "win_pct_adjusted": 0.5587,
-      "top4_appearances": 1,
-      "championships": 0
+      "championships": 0,
+      "championship_appearances": 1,
+      "runner_up_finishes": 1,
+      "playoff_appearances": 1,
+      "best_finish": 2,
+      "worst_finish": 2
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -260,10 +290,13 @@
       "games_played": 222,
       "win_pct": 0.527,
       "win_pct_adjusted": 0.5248,
-      "top4_appearances": 6,
-      "championships": 0
+      "championships": 0,
+      "championship_appearances": 2,
+      "runner_up_finishes": 2,
+      "playoff_appearances": 10,
+      "best_finish": 2,
+      "worst_finish": 7
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -290,10 +323,13 @@
       "games_played": 187,
       "win_pct": 0.5187,
       "win_pct_adjusted": 0.5169,
-      "top4_appearances": 4,
-      "championships": 0
+      "championships": 0,
+      "championship_appearances": 1,
+      "runner_up_finishes": 1,
+      "playoff_appearances": 9,
+      "best_finish": 2,
+      "worst_finish": 9
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -317,10 +353,13 @@
       "games_played": 140,
       "win_pct": 0.4857,
       "win_pct_adjusted": 0.4875,
-      "top4_appearances": 4,
-      "championships": 0
+      "championships": 0,
+      "championship_appearances": 1,
+      "runner_up_finishes": 1,
+      "playoff_appearances": 5,
+      "best_finish": 2,
+      "worst_finish": 9
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -339,10 +378,13 @@
       "games_played": 63,
       "win_pct": 0.4762,
       "win_pct_adjusted": 0.4819,
-      "top4_appearances": 3,
-      "championships": 0
+      "championships": 0,
+      "championship_appearances": 1,
+      "runner_up_finishes": 1,
+      "playoff_appearances": 3,
+      "best_finish": 2,
+      "worst_finish": 8
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -360,10 +402,13 @@
       "games_played": 46,
       "win_pct": 0.4565,
       "win_pct_adjusted": 0.4696,
-      "top4_appearances": 0,
-      "championships": 0
+      "championships": 0,
+      "championship_appearances": 0,
+      "runner_up_finishes": 0,
+      "playoff_appearances": 1,
+      "best_finish": 5,
+      "worst_finish": 8
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -380,10 +425,13 @@
       "games_played": 32,
       "win_pct": 0.4375,
       "win_pct_adjusted": 0.4614,
-      "top4_appearances": 0,
-      "championships": 0
+      "championships": 0,
+      "championship_appearances": 0,
+      "runner_up_finishes": 0,
+      "playoff_appearances": 0,
+      "best_finish": 7,
+      "worst_finish": 10
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -412,10 +460,13 @@
       "games_played": 221,
       "win_pct": 0.4299,
       "win_pct_adjusted": 0.4357,
-      "top4_appearances": 6,
-      "championships": 0
+      "championships": 0,
+      "championship_appearances": 3,
+      "runner_up_finishes": 3,
+      "playoff_appearances": 9,
+      "best_finish": 2,
+      "worst_finish": 10
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -431,10 +482,13 @@
       "games_played": 17,
       "win_pct": 0.2941,
       "win_pct_adjusted": 0.4053,
-      "top4_appearances": 0,
-      "championships": 0
+      "championships": 0,
+      "championship_appearances": 0,
+      "runner_up_finishes": 0,
+      "playoff_appearances": 1,
+      "best_finish": 6,
+      "worst_finish": 6
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -456,10 +510,13 @@
       "games_played": 109,
       "win_pct": 0.3853,
       "win_pct_adjusted": 0.4031,
-      "top4_appearances": 1,
-      "championships": 0
+      "championships": 0,
+      "championship_appearances": 0,
+      "runner_up_finishes": 0,
+      "playoff_appearances": 2,
+      "best_finish": 4,
+      "worst_finish": 10
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -475,10 +532,13 @@
       "games_played": 15,
       "win_pct": 0.2667,
       "win_pct_adjusted": 0.3999,
-      "top4_appearances": 0,
-      "championships": 0
+      "championships": 0,
+      "championship_appearances": 0,
+      "runner_up_finishes": 0,
+      "playoff_appearances": 0,
+      "best_finish": 8,
+      "worst_finish": 8
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -495,10 +555,13 @@
       "games_played": 30,
       "win_pct": 0.3333,
       "win_pct_adjusted": 0.3999,
-      "top4_appearances": 0,
-      "championships": 0
+      "championships": 0,
+      "championship_appearances": 0,
+      "runner_up_finishes": 0,
+      "playoff_appearances": 1,
+      "best_finish": 6,
+      "worst_finish": 7
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -518,10 +581,13 @@
       "games_played": 78,
       "win_pct": 0.3718,
       "win_pct_adjusted": 0.3979,
-      "top4_appearances": 1,
-      "championships": 0
+      "championships": 0,
+      "championship_appearances": 0,
+      "runner_up_finishes": 0,
+      "playoff_appearances": 2,
+      "best_finish": 4,
+      "worst_finish": 10
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -537,10 +603,13 @@
       "games_played": 17,
       "win_pct": 0.2353,
       "win_pct_adjusted": 0.3783,
-      "top4_appearances": 0,
-      "championships": 0
+      "championships": 0,
+      "championship_appearances": 0,
+      "runner_up_finishes": 0,
+      "playoff_appearances": 0,
+      "best_finish": 8,
+      "worst_finish": 8
     },
-    "bio": "",
     "photo": null
   },
   {
@@ -560,10 +629,13 @@
       "games_played": 79,
       "win_pct": 0.3038,
       "win_pct_adjusted": 0.3434,
-      "top4_appearances": 0,
-      "championships": 0
+      "championships": 0,
+      "championship_appearances": 0,
+      "runner_up_finishes": 0,
+      "playoff_appearances": 1,
+      "best_finish": 5,
+      "worst_finish": 10
     },
-    "bio": "",
     "photo": null
   }
 ]

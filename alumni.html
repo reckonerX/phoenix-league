@@ -42,10 +42,15 @@
 
   function render(sorted) {
     grid.innerHTML = sorted.map(m => `<div class="card alumni-card">
+      ${avatarHTML(m)}
       <h3>${m.display_name}</h3>
       <p class="meta">${Math.min(...m.years_active)}&ndash;${Math.max(...m.years_active)} &middot; ${m.years_active.length} season${m.years_active.length === 1 ? '' : 's'}</p>
-      <p class="stat-line">${m.career.wins}-${m.career.losses} (${pct(m.career.win_pct)}) &middot; ${m.career.championships} championship${m.career.championships === 1 ? '' : 's'}</p>
-      ${m.bio ? `<p>${m.bio}</p>` : `<div class="empty-state">Bio coming soon.</div>`}
+      <p class="stat-line">${m.career.wins}-${m.career.losses} (${pct(m.career.win_pct)})</p>
+      <p class="stat-line">${m.career.championships} championship${m.career.championships === 1 ? '' : 's'}
+         &middot; ${m.career.championship_appearances} title game${m.career.championship_appearances === 1 ? '' : 's'}
+         (${m.career.runner_up_finishes} runner-up)</p>
+      <p class="stat-line">Playoffs: ${m.career.playoff_appearances}/${m.years_active.length} seasons</p>
+      <p class="stat-line">Best: ${ordinal(m.career.best_finish)} &middot; Worst: ${ordinal(m.career.worst_finish)}</p>
     </div>`).join('');
   }
 
