@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>Season Archive — Phoenix League</title>
 <link rel="icon" href="assets/favicon.ico">
-<link rel="icon" type="image/svg+xml" href="assets/phoenix-league-logo-favicon.svg">
 <link rel="apple-touch-icon" href="assets/icon-192.png">
 <link rel="manifest" href="manifest.json">
 <link rel="stylesheet" href="css/style.css">
@@ -46,8 +45,8 @@
         but standings data has not been recovered yet.</p>
       </div>`;
     }
-    const standingsList = s.standings.map((slug, i) =>
-      `<li>${i + 1}. ${nameOf(slug)}</li>`).join('');
+    const standingsList = s.standings.map((slug) =>
+      `<li>${nameOf(slug)}</li>`).join('');
     return `<div class="card season-card" style="margin-bottom:16px;">
       <span class="badge champion">${s.year} Champion: ${nameOf(s.champion)}</span>
       <span class="badge">Platform: ${s.platform || 'TBD'}</span>
