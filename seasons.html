@@ -14,7 +14,7 @@
 <section class="hero">
   <div class="wrap">
     <h1>Season Archive</h1>
-    <p>Every season since 2011, standings, and the stories behind them (anecdotes coming as they're submitted).</p>
+    <p>Every season since 2011, with full standings and win-loss records.</p>
   </div>
 </section>
 
@@ -45,19 +45,22 @@
         but standings data has not been recovered yet.</p>
       </div>`;
     }
-    const standingsList = s.standings.map((slug) =>
-      `<li>${nameOf(slug)}</li>`).join('');
+    const standingsRows = s.standings.map((slug, i) => {
+      const rec = s.records[slug];
+      const wl = rec ? `${rec.wins}-${rec.losses}` : '&mdash;';
+      return `<tr><td>${i + 1}</td><td>${nameOf(slug)}</td><td>${wl}</td></tr>`;
+    }).join('');
     return `<div class="card season-card" style="margin-bottom:16px;">
       <span class="badge champion">${s.year} Champion: ${nameOf(s.champion)}</span>
       <span class="badge">Platform: ${s.platform || 'TBD'}</span>
       <h3>${s.year} Season</h3>
       <details>
-        <summary>Full standings</summary>
-        <ol>${standingsList}</ol>
+        <summary>Full standings &amp; record</summary>
+        <table>
+          <thead><tr><th>Finish</th><th>Manager</th><th>W-L</th></tr></thead>
+          <tbody>${standingsRows}</tbody>
+        </table>
       </details>
-      ${s.anecdotes.length
-        ? `<ul>${s.anecdotes.map(a => `<li>${a}</li>`).join('')}</ul>`
-        : `<div class="empty-state" style="margin-top:10px;">No stories submitted yet for this season.</div>`}
     </div>`;
   }).join('');
 
