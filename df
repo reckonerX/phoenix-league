@@ -1,0 +1,21 @@
+[33mcommit c74d1a9a95a6355a88253283cd4cb20d41b031e0[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Will Hare <will.hare.89@gmail.com>
+Date:   Mon Aug 3 04:27:44 2026 -0400
+
+    describe what changed here
+
+ alumni.html                         |   1 [31m-[m
+ assets/favicon.ico                  | Bin [31m814[m -> [32m2968[m bytes
+ assets/icon-192.png                 | Bin [31m36770[m -> [32m32281[m bytes
+ assets/icon-512.png                 | Bin [31m116993[m -> [32m105566[m bytes
+ assets/phoenix-league-icon.png      | Bin [31m0[m -> [32m18635[m bytes
+ assets/phoenix-league-logo-full.png | Bin [31m47860[m -> [32m49684[m bytes
+ assets/phoenix-league-logo-full.svg |   1 [32m+[m
+ data/display_names.json             |  26 [32m++++++++++++++++++++++++++[m
+ index.html                          |   1 [31m-[m
+ partials/nav.html                   |   2 [32m+[m[31m-[m
+ roster.html                         |   1 [31m-[m
+ rulebook.html                       |   5 [31m-----[m
+ seasons.html                        |   5 [32m++[m[31m---[m
+ stats.html                          |   1 [31m-[m
+ 14 files changed, 30 insertions(+), 13 deletions(-)

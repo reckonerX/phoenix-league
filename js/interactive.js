@@ -1,8 +1,3 @@
-// Makes any <table> sortable by clicking its <th> cells.
-// Reads a numeric sort value from each cell's data-sort attribute if
-// present (for things like "117-71" records or "62.2%" where the display
-// text isn't directly sortable), otherwise falls back to parsing the
-// cell's own text as a number, otherwise sorts as plain text.
 function makeSortable(table) {
   const thead = table.querySelector('thead');
   const tbody = table.querySelector('tbody');
@@ -53,10 +48,6 @@ function makeSortable(table) {
   });
 }
 
-// Filters visible rows/cards by a search string against one or more
-// text sources per item. `getText(item)` should return the searchable
-// string for a given element; `items` is a NodeList/array of elements
-// to show/hide.
 function wireFilter(inputEl, items, getText) {
   inputEl.addEventListener('input', () => {
     const q = inputEl.value.trim().toLowerCase();

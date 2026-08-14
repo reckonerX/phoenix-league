@@ -333,6 +333,26 @@
     "photo": null
   },
   {
+    "slug": "curran",
+    "display_name": "Curran",
+    "status": "current",
+    "years_active": [],
+    "career": {
+      "wins": 0,
+      "losses": 0,
+      "games_played": 0,
+      "win_pct": 0,
+      "win_pct_adjusted": 0.4998,
+      "championships": 0,
+      "championship_appearances": 0,
+      "runner_up_finishes": 0,
+      "playoff_appearances": 0,
+      "best_finish": null,
+      "worst_finish": null
+    },
+    "photo": null
+  },
+  {
     "slug": "brock",
     "display_name": "Brock",
     "status": "current",
@@ -494,7 +514,7 @@
   {
     "slug": "frankie",
     "display_name": "Frankie",
-    "status": "current",
+    "status": "alumni",
     "years_active": [
       2019,
       2020,

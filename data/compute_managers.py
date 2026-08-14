@@ -1,18 +1,25 @@
 """
-Regenerates data/managers.json from data/seasons.json.
+Regenerates data/managers.json from data/seasons.json (stats) and
+data/current-roster.json (who's actually on the roster right now).
 
-seasons.json is the source of truth (per-season records + standings).
-managers.json is fully derived -- never hand-edit it directly.
+seasons.json is the source of truth for STATS -- never hand-edit managers.json's
+career numbers directly.
 
-To add a new season:
-  1. Add one new object to the "seasons" array in seasons.json:
-     year, platform, legacy_missing_data, champion, standings (ranked
-     list of manager slugs, 1st place first), records (per-manager
-     wins/losses for that year), anecdotes (usually empty to start).
+current-roster.json is the source of truth for MEMBERSHIP (current vs alumni).
+This is intentionally separate from stats: a brand new manager has zero games
+played but is still "current" the moment they join, and an outgoing manager
+should flip to "alumni" immediately, not whenever next season's data gets
+entered. Update current-roster.json by hand the moment membership changes.
+
+To add a new season's stats:
+  1. Add one new object to the "seasons" array in seasons.json.
   2. Run this script: python3 compute_managers.py
-  3. managers.json is regenerated from scratch, including career
-     totals and the weighted win% for every manager, current/alumni
-     status, championships, and top-4 counts.
+
+To handle a manager joining/leaving:
+  1. Update the "current_slugs" list in current-roster.json immediately.
+  2. Run this script: python3 compute_managers.py
+  (A new manager with no games yet will still appear, with all-zero stats,
+  as long as they're in current-roster.json and display_names.json.)
 
 Run from the phoenix-league/ directory, or adjust the paths below.
 """
@@ -23,6 +30,7 @@ DATA_DIR = Path(__file__).parent
 SEASONS_PATH = DATA_DIR / "seasons.json"
 MANAGERS_PATH = DATA_DIR / "managers.json"
 DISPLAY_NAMES_PATH = DATA_DIR / "display_names.json"
+CURRENT_ROSTER_PATH = DATA_DIR / "current-roster.json"
 
 SHRINKAGE_K = 20  # "phantom games" at league average, for weighted win%
 
@@ -31,16 +39,16 @@ def main():
         seasons = json.load(f)
     with open(DISPLAY_NAMES_PATH) as f:
         display_names = json.load(f)
-    # Preserve any existing photo already set by hand
+    with open(CURRENT_ROSTER_PATH) as f:
+        current_slugs = set(json.load(f)["current_slugs"])
+
     existing_photos = {}
     if MANAGERS_PATH.exists():
         with open(MANAGERS_PATH) as f:
             for m in json.load(f):
                 existing_photos[m["slug"]] = m.get("photo")
 
-    latest_year = max(s["year"] for s in seasons)
-
-    per_manager = {}  # slug -> {years_active: [...], wins, losses, championships, top4}
+    per_manager = {}
     for s in seasons:
         yr = s["year"]
         standings = s.get("standings", [])
@@ -67,6 +75,16 @@ def main():
                 if pos <= 6:
                     m["playoff_appearances"] += 1
 
+    # Make sure every current-roster slug exists even with zero games played
+    # (e.g. a brand new manager who hasn't played a season yet).
+    for slug in current_slugs:
+        per_manager.setdefault(slug, {
+            "years_active": [], "wins": 0, "losses": 0,
+            "championships": 0, "playoff_appearances": 0,
+            "championship_appearances": 0, "runner_up_finishes": 0,
+            "finishes": []
+        })
+
     total_w = sum(m["wins"] for m in per_manager.values())
     total_g = sum(m["wins"] + m["losses"] for m in per_manager.values())
     league_avg = total_w / total_g if total_g else 0
@@ -75,12 +93,12 @@ def main():
     for slug, m in per_manager.items():
         games = m["wins"] + m["losses"]
         win_pct = round(m["wins"] / games, 4) if games else 0
-        win_pct_adj = round((m["wins"] + SHRINKAGE_K * league_avg) / (games + SHRINKAGE_K), 4)
+        win_pct_adj = round((m["wins"] + SHRINKAGE_K * league_avg) / (games + SHRINKAGE_K), 4) if (games or league_avg) else 0
         photo = existing_photos.get(slug)
         managers_out.append({
             "slug": slug,
             "display_name": display_names.get(slug, slug),
-            "status": "current" if latest_year in m["years_active"] else "alumni",
+            "status": "current" if slug in current_slugs else "alumni",
             "years_active": sorted(m["years_active"]),
             "career": {
                 "wins": m["wins"], "losses": m["losses"], "games_played": games,
@@ -100,8 +118,9 @@ def main():
     with open(MANAGERS_PATH, "w") as f:
         json.dump(managers_out, f, indent=2)
 
-    print(f"Regenerated managers.json: {len(managers_out)} managers, "
-          f"latest season {latest_year}, league avg win% {league_avg:.4f}")
+    current = [m["display_name"] for m in managers_out if m["status"] == "current"]
+    print(f"Regenerated managers.json: {len(managers_out)} managers")
+    print(f"Current roster ({len(current)}): {current}")
 
 if __name__ == "__main__":
     main()

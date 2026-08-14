@@ -25,7 +25,7 @@
     <h2>Championships</h2>
     <input type="text" class="filter-input" id="champ-filter" placeholder="Filter by manager name...">
     <table id="champ-table"><thead>
-      <tr><th>Manager</th><th>Championships</th><th>Top-4 Finishes</th><th>Seasons Played</th></tr>
+      <tr><th>Manager</th><th>Championships</th><th>Playoff Appearances</th><th>Seasons Played</th></tr>
     </thead><tbody></tbody></table>
   </section>
 
@@ -49,11 +49,11 @@
 
   const champBody = document.querySelector('#champ-table tbody');
   champBody.innerHTML = [...managers]
-    .sort((a, b) => b.career.championships - a.career.championships || b.career.top4_appearances - a.career.top4_appearances)
+    .sort((a, b) => b.career.championships - a.career.championships || b.career.playoff_appearances - a.career.playoff_appearances)
     .map(m => `<tr>
       <td>${m.display_name}</td>
       <td data-sort="${m.career.championships}">${m.career.championships}</td>
-      <td data-sort="${m.career.top4_appearances}">${m.career.top4_appearances}</td>
+      <td data-sort="${m.career.playoff_appearances}">${m.career.playoff_appearances}</td>
       <td data-sort="${m.years_active.length}">${m.years_active.length}</td>
     </tr>`).join('');
 

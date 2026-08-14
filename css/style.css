@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@400;500;600;700&display=swap');
 
 :root {
-  --brand-primary: #F3A50F;    /* gold/orange, sampled from logo */
-  --brand-secondary: #C97F0A;  /* burnt-orange, darker sibling of primary */
-  --brand-accent: #F1EB11;     /* inner-flame yellow, sampled from logo */
-  --brand-bg: #02234C;         /* navy, sampled from logo */
-  --brand-bg-alt: #1B395E;     /* navy blended 10% toward white, card surfaces */
-  --brand-text: #FFFFFF;       /* white, sampled from logo */
-  --brand-border: #3A5373;     /* navy blended 22% toward white, hairlines */
+  --brand-primary: #F3A50F;
+  --brand-secondary: #C97F0A;
+  --brand-accent: #F1EB11;
+  --brand-bg: #02234C;
+  --brand-bg-alt: #1B395E;
+  --brand-text: #FFFFFF;
+  --brand-border: #3A5373;
 
   --font-display: 'Archivo Black', sans-serif;
   --font-body: 'Barlow', sans-serif;
@@ -86,8 +86,6 @@ header.site-header {
 }
 
 /* --- Hero --- */
-/* Navy-dominant, gold as accent only - matches the logo's own color
-   proportions (mostly navy, gold/yellow used sparingly for the mark). */
 .hero {
   position: relative;
   overflow: hidden;
@@ -140,6 +138,14 @@ header.site-header {
 .card .meta { color: var(--brand-secondary); font-size: 0.85rem; margin: 0; }
 .card .stat-line { font-size: 0.85rem; margin: 4px 0 0; }
 
+.card.champion-highlight {
+  background: var(--brand-bg-alt);
+  border: 2px solid var(--brand-primary);
+  color: var(--brand-text);
+}
+.card.champion-highlight h3 { color: var(--brand-text); }
+.card.champion-highlight .meta { color: var(--brand-text); opacity: 0.85; }
+
 .avatar {
   width: 64px; height: 64px; border-radius: 50%;
   object-fit: cover; margin-bottom: 10px;
@@ -168,14 +174,6 @@ header.site-header {
   color: var(--brand-secondary);
   margin: 16px 0;
 }
-
-.card.champion-highlight {
-  background: var(--brand-bg-alt);
-  border: 2px solid var(--brand-primary);
-  color: var(--brand-text);
-}
-.card.champion-highlight h3 { color: var(--brand-text); }
-.card.champion-highlight .meta { color: var(--brand-text); opacity: 0.85; }
 
 .badge {
   display: inline-block;

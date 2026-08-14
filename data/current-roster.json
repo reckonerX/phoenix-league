@@ -1,0 +1,7 @@
+{
+  "_comment": "This is the source of truth for who is CURRENTLY on the roster, updated by hand whenever membership changes. It is intentionally NOT derived from seasons.json, because roster membership is a real-world fact that doesn't wait for stats to exist (e.g. a brand-new manager has zero games played but is still 'current'). compute_managers.py reads this file to set each manager's status field. Update this the moment a membership change happens, not when the season's data eventually gets entered.",
+  "current_slugs": [
+    "stephen", "wes", "dan", "will", "nick",
+    "brock", "alex", "jack", "david", "curran"
+  ]
+}
