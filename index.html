@@ -13,11 +13,11 @@
 
 <section class="hero">
   <div class="wrap">
-    <p class="eyebrow">Est. 2011 &middot; 14 seasons and counting</p>
+    <p class="eyebrow" id="season-count">Est. 2011 &middot; 16 seasons and counting</p>
     <h1>The Phoenix League</h1>
-    <p>A dynasty fantasy league with a decade-plus of history, rivalries, and
-       stories. This page is a structural placeholder &mdash; brand, imagery,
-       and final copy are being designed separately.</p>
+    <p>Ten managers, one keeper league, and a grudge list going back to 2011.
+       Three platforms, 25 managers and every in-person draft later, the
+       Phoenix League is still here, and somebody still has to host the meeting.</p>
   </div>
 </section>
 
@@ -39,10 +39,21 @@
   </section>
 </main>
 
-<footer class="site-footer"><div class="wrap">Phoenix League &middot; site structure in progress</div></footer>
+<footer class="site-footer"><div class="wrap">Phoenix League &middot; Est. 2011</div></footer>
 
 <script src="js/include.js"></script>
 <script src="js/data.js"></script>
+<script>
+  // Season count includes the season in progress (2016 counts: it was played,
+  // only its data was lost). A new season starts counting in September.
+  (function () {
+    const now = new Date();
+    const currentSeason = now.getMonth() >= 8 ? now.getFullYear() : now.getFullYear() - 1;
+    const count = currentSeason - 2011 + 1;
+    document.getElementById('season-count').innerHTML =
+      'Est. 2011 &middot; ' + count + ' seasons and counting';
+  })();
+</script>
 <script>
 (async function () {
   const seasons = await loadSeasons();
